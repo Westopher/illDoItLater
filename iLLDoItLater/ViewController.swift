@@ -10,14 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var toDos: [ToDo] = []
+    
     @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.titleLabel.layer.cornerRadius = 10
+        toDos = createToDos()
     }
 
-
+    func createToDos() -> [ToDo] {
+        var firstItem = ToDo(title: "first item", description: "this is this first to do list item")
+        var seconditem = ToDo(title: "second item", description: "second item")
+        
+        return [firstItem, seconditem]
+    }
     
     
     
@@ -28,11 +36,14 @@ class ViewController: UIViewController {
 
     extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return toDos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = "hello"
+        
+        return cell
     }
     
     
