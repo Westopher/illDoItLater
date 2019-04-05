@@ -10,14 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.titleLabel.layer.cornerRadius = 10
     }
 
 
 }
 
-extension ViewController: UITableViewDataSource {
+    extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -29,6 +34,6 @@ extension ViewController: UITableViewDataSource {
     
 }
 
-extension ViewController: UITableViewDelegate {
+    extension ViewController: UITableViewDelegate {
     
 }
