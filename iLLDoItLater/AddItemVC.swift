@@ -11,16 +11,17 @@ import UIKit
 class AddItemVC: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField?
+    @IBOutlet weak var addButtonStyle: UIButton!
     
     @IBAction func addButtonPressed(_ sender: Any) {
-        print("pressed")
     }
+    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    self.addButtonStyle.layer.cornerRadius = 15
     }
     
 

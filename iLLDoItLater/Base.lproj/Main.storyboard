@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xJT-jN-in8">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,18 +15,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iLLDoItLater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cbp-vO-IDc">
-                                <rect key="frame" x="0.0" y="164" width="320" height="404"/>
+                                <rect key="frame" x="0.0" y="188" width="414" height="674"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="105" id="zb9-z9-NNF">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="105"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zb9-z9-NNF" id="ls6-sw-mPb">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="104.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="104.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -37,7 +37,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'll Do It Later" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1P7-W3-faM">
-                                <rect key="frame" x="5" y="69" width="310" height="90"/>
+                                <rect key="frame" x="5" y="93" width="404" height="90"/>
                                 <color key="backgroundColor" red="0.86764843845125394" green="0.20508202828525804" blue="0.16654008358508707" alpha="0.40357448630136988" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="44"/>
@@ -81,20 +81,20 @@
             <objects>
                 <viewController id="81u-e0-QLa" customClass="AddItemVC" customModule="iLLDoItLater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NU0-M6-xL2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Your To Do List Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ej-uT-6TT">
-                                <rect key="frame" x="42" y="84" width="236.5" height="29"/>
+                                <rect key="frame" x="89" y="108" width="236.5" height="29"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="hm4-we-CZr" userLabel="Title And Description Stack">
-                                <rect key="frame" x="10" y="163" width="300" height="173"/>
+                                <rect key="frame" x="10" y="187" width="394" height="173"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AmN-Ex-HLm" userLabel="Title Stack">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="72.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="72.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPg-Uo-avQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="49.5" height="34.5"/>
@@ -103,7 +103,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IDs-X7-dQe">
-                                                <rect key="frame" x="0.0" y="42.5" width="300" height="30"/>
+                                                <rect key="frame" x="0.0" y="42.5" width="394" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -115,7 +115,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="D2I-YE-JjH" userLabel="Description Stack">
-                                        <rect key="frame" x="0.0" y="100.5" width="300" height="72.5"/>
+                                        <rect key="frame" x="0.0" y="100.5" width="394" height="72.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnG-oA-fwj">
                                                 <rect key="frame" x="0.0" y="0.0" width="133" height="34.5"/>
@@ -124,7 +124,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WVD-tE-56B">
-                                                <rect key="frame" x="0.0" y="42.5" width="300" height="30"/>
+                                                <rect key="frame" x="0.0" y="42.5" width="394" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -137,16 +137,17 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ff7-6N-RGG">
-                                <rect key="frame" x="20" y="434" width="82" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iln-9x-FOr">
+                                <rect key="frame" x="10" y="440" width="394" height="67"/>
+                                <color key="backgroundColor" red="0.70503320153302229" green="0.81075467463623818" blue="0.88808048588370303" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.11106927372241329" green="0.32445144229072703" blue="0.59312036104008636" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="addButtonPressed:" destination="81u-e0-QLa" eventType="touchUpInside" id="NhZ-pN-fpr"/>
+                                    <action selector="addButtonPressed:" destination="81u-e0-QLa" eventType="touchUpInside" id="eUx-Wa-LEw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -154,6 +155,9 @@
                         <constraints>
                             <constraint firstItem="5ej-uT-6TT" firstAttribute="top" secondItem="oqP-B0-2PU" secondAttribute="top" constant="20" id="2aR-Zs-NDE"/>
                             <constraint firstItem="oqP-B0-2PU" firstAttribute="trailing" secondItem="hm4-we-CZr" secondAttribute="trailing" constant="10" id="Gee-Ua-UX7"/>
+                            <constraint firstItem="iln-9x-FOr" firstAttribute="leading" secondItem="oqP-B0-2PU" secondAttribute="leading" constant="10" id="Sru-Bi-5KO"/>
+                            <constraint firstItem="iln-9x-FOr" firstAttribute="top" secondItem="hm4-we-CZr" secondAttribute="bottom" constant="80" id="UxH-xQ-yX0"/>
+                            <constraint firstItem="oqP-B0-2PU" firstAttribute="trailing" secondItem="iln-9x-FOr" secondAttribute="trailing" constant="10" id="aL1-Ic-I7W"/>
                             <constraint firstItem="5ej-uT-6TT" firstAttribute="centerX" secondItem="NU0-M6-xL2" secondAttribute="centerX" id="dDH-rj-ixp"/>
                             <constraint firstItem="hm4-we-CZr" firstAttribute="leading" secondItem="oqP-B0-2PU" secondAttribute="leading" constant="10" id="u8c-g1-dZg"/>
                             <constraint firstItem="hm4-we-CZr" firstAttribute="top" secondItem="5ej-uT-6TT" secondAttribute="bottom" constant="50" id="vvc-tS-uU3"/>
@@ -161,6 +165,7 @@
                         <viewLayoutGuide key="safeArea" id="oqP-B0-2PU"/>
                     </view>
                     <connections>
+                        <outlet property="addButtonStyle" destination="iln-9x-FOr" id="Vto-CN-hTY"/>
                         <outlet property="descriptionTextField" destination="WVD-tE-56B" id="kDH-mr-3wn"/>
                         <outlet property="titleTextField" destination="IDs-X7-dQe" id="V3H-LC-vGD"/>
                     </connections>
@@ -175,7 +180,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xJT-jN-in8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ihW-4q-wm1">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
