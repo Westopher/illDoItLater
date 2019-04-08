@@ -137,14 +137,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iln-9x-FOr">
-                                <rect key="frame" x="10" y="440" width="394" height="67"/>
-                                <color key="backgroundColor" red="0.70503320153302229" green="0.81075467463623818" blue="0.88808048588370303" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iln-9x-FOr">
+                                <rect key="frame" x="10" y="440" width="394" height="60"/>
+                                <color key="backgroundColor" red="0.70588235294117641" green="0.81176470588235294" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="40"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" red="0.11106927372241329" green="0.32445144229072703" blue="0.59312036104008636" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.10980392156862745" green="0.32549019607843138" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="addButtonPressed:" destination="81u-e0-QLa" eventType="touchUpInside" id="eUx-Wa-LEw"/>
