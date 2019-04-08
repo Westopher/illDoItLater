@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ToDo {
+class ToDoObject {
     var title: String
     var description: String
     

@@ -69,6 +69,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableview" destination="cbp-vO-IDc" id="BBH-yM-cDm"/>
                         <outlet property="titleLabel" destination="1P7-W3-faM" id="5qP-yB-g5a"/>
                     </connections>
                 </viewController>
