@@ -58,7 +58,8 @@ class ViewController: UIViewController {
             //if the user taps on a li
             if segue.identifier == "DetailSegue" {
                 if let ViewItemVC = segue.destination as? ViewToDoListItemVC, let ip = tableview.indexPathForSelectedRow {
-                   ViewItemVC.titleToDisplay = "\(toDosArray[ip.row].title)"
+                    ViewItemVC.titleToDisplay = "\(toDosArray[ip.row].title)"
+                    ViewItemVC.descriptionToDisplay = "\(toDosArray[ip.row].description)"
                 }
             }
             
