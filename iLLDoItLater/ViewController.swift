@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         return [firstItem, seconditem]
     }
     
+    
 
 }
 
@@ -57,14 +58,20 @@ class ViewController: UIViewController {
             //if the user taps on a li
             if segue.identifier == "DetailSegue" {
                 if let ViewItemVC = segue.destination as? ViewToDoListItemVC, let ip = tableview.indexPathForSelectedRow {
-                   // ViewItemVC.titleToDisplay = toDosArray.title[ip.row]
+                   ViewItemVC.titleToDisplay = "\(toDosArray[ip.row].title)"
                 }
             }
             
         }
+        
+        
     
 }
 
-    extension ViewController: UITableViewDelegate {
-    
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "DetailSegue", sender: nil)
+    }
 }
+
+
