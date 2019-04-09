@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     func createToDos() -> [ToDoObject] {
         var firstItem = ToDoObject(title: "first item", description: "this is this first to do list item")
         var seconditem = ToDoObject(title: "second item", description: "second item")
-        
+
         return [firstItem, seconditem]
     }
     
@@ -49,8 +49,18 @@ class ViewController: UIViewController {
     }
     
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let addVC = segue.destination as! AddItemVC
-            addVC.ToDoListItemsVC = self
+            //if the user taps on the plus sign in the upper right to add a new list item
+            if segue.identifier == "AddNewSegue" {
+                let addVC = segue.destination as! AddItemVC
+                addVC.ToDoListItemsVC = self
+            }
+            //if the user taps on a li
+            if segue.identifier == "DetailSegue" {
+                if let ViewItemVC = segue.destination as? ViewToDoListItemVC, let ip = tableview.indexPathForSelectedRow {
+                   // ViewItemVC.titleToDisplay = toDosArray.title[ip.row]
+                }
+            }
+            
         }
     
 }

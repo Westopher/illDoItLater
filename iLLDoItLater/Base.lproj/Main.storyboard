@@ -64,13 +64,14 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="VWJ-mF-FDN"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CF7-bR-cAz">
                             <connections>
-                                <segue destination="81u-e0-QLa" kind="show" id="Z5m-hN-RmU"/>
+                                <segue destination="81u-e0-QLa" kind="show" identifier="AddNewSegue" id="Z5m-hN-RmU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="cbp-vO-IDc" id="BBH-yM-cDm"/>
                         <outlet property="titleLabel" destination="1P7-W3-faM" id="5qP-yB-g5a"/>
+                        <segue destination="YR2-ZH-zLN" kind="show" identifier="DetailSegue" id="day-1N-AyY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -86,13 +87,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Your To Do List Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ej-uT-6TT">
-                                <rect key="frame" x="89" y="108" width="236.5" height="29"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="21"/>
+                                <rect key="frame" x="83.5" y="108" width="247.5" height="30.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="hm4-we-CZr" userLabel="Title And Description Stack">
-                                <rect key="frame" x="10" y="187" width="394" height="173"/>
+                                <rect key="frame" x="10" y="178.5" width="394" height="173"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AmN-Ex-HLm" userLabel="Title Stack">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="72.5"/>
@@ -161,7 +162,7 @@
                             <constraint firstItem="oqP-B0-2PU" firstAttribute="trailing" secondItem="iln-9x-FOr" secondAttribute="trailing" constant="10" id="aL1-Ic-I7W"/>
                             <constraint firstItem="5ej-uT-6TT" firstAttribute="centerX" secondItem="NU0-M6-xL2" secondAttribute="centerX" id="dDH-rj-ixp"/>
                             <constraint firstItem="hm4-we-CZr" firstAttribute="leading" secondItem="oqP-B0-2PU" secondAttribute="leading" constant="10" id="u8c-g1-dZg"/>
-                            <constraint firstItem="hm4-we-CZr" firstAttribute="top" secondItem="5ej-uT-6TT" secondAttribute="bottom" constant="50" id="vvc-tS-uU3"/>
+                            <constraint firstItem="hm4-we-CZr" firstAttribute="top" secondItem="5ej-uT-6TT" secondAttribute="bottom" constant="40" id="vvc-tS-uU3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oqP-B0-2PU"/>
                     </view>
@@ -173,7 +174,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDX-n6-Cfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021.7391304347827" y="-654.24107142857144"/>
+            <point key="canvasLocation" x="2055" y="-986"/>
+        </scene>
+        <!--View To Do List ItemVC-->
+        <scene sceneID="Ovm-3W-jwW">
+            <objects>
+                <viewController id="YR2-ZH-zLN" customClass="ViewToDoListItemVC" customModule="iLLDoItLater" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OzD-qQ-zDP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="sYz-k4-QZB">
+                                <rect key="frame" x="20" y="148" width="374" height="101"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovz-au-LGV">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfQ-LX-dVb">
+                                        <rect key="frame" x="0.0" y="70.5" width="374" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sYz-k4-QZB" firstAttribute="top" secondItem="AiS-Ww-UnT" secondAttribute="top" constant="60" id="Cxm-TS-4bT"/>
+                            <constraint firstItem="AiS-Ww-UnT" firstAttribute="trailing" secondItem="sYz-k4-QZB" secondAttribute="trailing" constant="20" id="c8q-j2-v55"/>
+                            <constraint firstItem="sYz-k4-QZB" firstAttribute="leading" secondItem="AiS-Ww-UnT" secondAttribute="leading" constant="20" id="tho-x8-bax"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AiS-Ww-UnT"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionItemLabel" destination="UfQ-LX-dVb" id="JWM-0P-HdX"/>
+                        <outlet property="titleItemLabel" destination="ovz-au-LGV" id="DS2-dS-zSa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ad8-fX-9gW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2053.6231884057975" y="-261.16071428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nXC-Br-NjV">
