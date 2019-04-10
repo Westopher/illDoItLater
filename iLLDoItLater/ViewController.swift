@@ -13,9 +13,7 @@ class ViewController: UIViewController {
     var toDosArray: [ToDoObject] = []
     
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var tableview: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +27,6 @@ class ViewController: UIViewController {
 
         return [firstItem, seconditem]
     }
-    
-    
 
 }
 
@@ -55,7 +51,7 @@ class ViewController: UIViewController {
                 let addVC = segue.destination as! AddItemVC
                 addVC.ToDoListItemsVC = self
             }
-            //if the user taps on a li
+            //if the user taps on a list item, this sets the next page's labels
             if segue.identifier == "DetailSegue" {
                 if let ViewItemVC = segue.destination as? ViewToDoListItemVC, let ip = tableview.indexPathForSelectedRow {
                     ViewItemVC.titleToDisplay = "\(toDosArray[ip.row].title)"
@@ -64,15 +60,34 @@ class ViewController: UIViewController {
             }
             
         }
-        
-        
     
 }
+
+
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "DetailSegue", sender: nil)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            toDosArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        return "Remove"
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let source = toDosArray[sourceIndexPath.row]
+        
+        toDosArray.remove(at: sourceIndexPath.row)
+        toDosArray.insert(source, at: destinationIndexPath.row)
+    }
+    
 }
 
 
