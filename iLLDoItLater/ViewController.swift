@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //making a variable that is an empty array of type todoobject so that you can put your list somewhere.
     var toDosArray: [ToDoObject] = []
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
 }
 
     extension ViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return toDosArray.count
     }
