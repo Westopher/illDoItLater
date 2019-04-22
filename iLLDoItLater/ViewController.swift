@@ -48,11 +48,12 @@ class ViewController: UIViewController {
     }
     
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            //if the user taps on the plus sign in the upper right to add a new list item
+            //if the user taps on the plus sign in the upper right to add a new list item, send them to the add item view
             if segue.identifier == "AddNewSegue" {
                 let addVC = segue.destination as! AddItemVC
                 addVC.ToDoListItemsVC = self
             }
+            
             //if the user taps on a list item, this sets the next page's labels
             if segue.identifier == "DetailSegue" {
                 if let ViewItemVC = segue.destination as? ViewToDoListItemVC, let ip = tableview.indexPathForSelectedRow {
@@ -66,8 +67,8 @@ class ViewController: UIViewController {
 }
 
 
-
 extension ViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "DetailSegue", sender: nil)
     }
@@ -84,8 +85,8 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let source = toDosArray[sourceIndexPath.row]
         
+        let source = toDosArray[sourceIndexPath.row]
         toDosArray.remove(at: sourceIndexPath.row)
         toDosArray.insert(source, at: destinationIndexPath.row)
     }
