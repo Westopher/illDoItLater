@@ -56,7 +56,8 @@ class ViewController: UIViewController {
             
             //if the user taps on a list item, this sets the next page's labels
             if segue.identifier == "DetailSegue" {
-                if let ViewItemVC = segue.destination as? ViewToDoListItemVC, let ip = tableview.indexPathForSelectedRow {
+                if let ViewItemVC = segue.destination as? ViewToDoListItemVC,
+                    let ip = tableview.indexPathForSelectedRow {
                     ViewItemVC.titleToDisplay = "\(toDosArray[ip.row].title)"
                     ViewItemVC.descriptionToDisplay = "\(toDosArray[ip.row].description)"
                 }

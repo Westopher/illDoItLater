@@ -15,9 +15,11 @@
 		3D89F0632257BA7900775CC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D89F0612257BA7900775CC3 /* Main.storyboard */; };
 		3D89F0652257BA7A00775CC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D89F0642257BA7A00775CC3 /* Assets.xcassets */; };
 		3D89F0682257BA7A00775CC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D89F0662257BA7A00775CC3 /* LaunchScreen.storyboard */; };
+		72F1C3D3540BF85F80FB1BB9 /* Pods_iLLDoItLater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73D908005EC606B83F9FB92 /* Pods_iLLDoItLater.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		250B594A54E74236B9A6AECC /* Pods-iLLDoItLater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iLLDoItLater.release.xcconfig"; path = "Target Support Files/Pods-iLLDoItLater/Pods-iLLDoItLater.release.xcconfig"; sourceTree = "<group>"; };
 		3D0705D7225C0EF9000D2902 /* ViewToDoListItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToDoListItemVC.swift; sourceTree = "<group>"; };
 		3D6F1BD92257CFD0000AF821 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 		3D6F1BDB2257E28C000AF821 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
@@ -28,6 +30,8 @@
 		3D89F0642257BA7A00775CC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D89F0672257BA7A00775CC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D89F0692257BA7A00775CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42E69AA070F62C95A81BA57B /* Pods-iLLDoItLater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iLLDoItLater.debug.xcconfig"; path = "Target Support Files/Pods-iLLDoItLater/Pods-iLLDoItLater.debug.xcconfig"; sourceTree = "<group>"; };
+		E73D908005EC606B83F9FB92 /* Pods_iLLDoItLater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iLLDoItLater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F1C3D3540BF85F80FB1BB9 /* Pods_iLLDoItLater.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		035EF01A671BE36882CEE1BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E73D908005EC606B83F9FB92 /* Pods_iLLDoItLater.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3D89F0512257BA7900775CC3 = {
 			isa = PBXGroup;
 			children = (
 				3D89F05C2257BA7900775CC3 /* iLLDoItLater */,
 				3D89F05B2257BA7900775CC3 /* Products */,
+				77D5D42931DED2EDAE315B81 /* Pods */,
+				035EF01A671BE36882CEE1BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +88,16 @@
 			path = iLLDoItLater;
 			sourceTree = "<group>";
 		};
+		77D5D42931DED2EDAE315B81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42E69AA070F62C95A81BA57B /* Pods-iLLDoItLater.debug.xcconfig */,
+				250B594A54E74236B9A6AECC /* Pods-iLLDoItLater.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D89F06C2257BA7A00775CC3 /* Build configuration list for PBXNativeTarget "iLLDoItLater" */;
 			buildPhases = (
+				51A41D154186B26DFE446AB0 /* [CP] Check Pods Manifest.lock */,
 				3D89F0562257BA7900775CC3 /* Sources */,
 				3D89F0572257BA7900775CC3 /* Frameworks */,
 				3D89F0582257BA7900775CC3 /* Resources */,
+				9BD4EF9F99ACBB4829213670 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51A41D154186B26DFE446AB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iLLDoItLater-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BD4EF9F99ACBB4829213670 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iLLDoItLater/Pods-iLLDoItLater-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iLLDoItLater/Pods-iLLDoItLater-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3D89F0562257BA7900775CC3 /* Sources */ = {
@@ -292,6 +368,7 @@
 		};
 		3D89F06D2257BA7A00775CC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42E69AA070F62C95A81BA57B /* Pods-iLLDoItLater.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,6 +387,7 @@
 		};
 		3D89F06E2257BA7A00775CC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 250B594A54E74236B9A6AECC /* Pods-iLLDoItLater.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
