@@ -20,16 +20,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.titleLabel.layer.cornerRadius = 10
-        toDosArray = createToDos()
         
         print(Realm.Configuration.defaultConfiguration.fileURL)
-    }
-
-    func createToDos() -> [ToDoObject] {
-        var firstItem = ToDoObject(title: "first item", description: "this is this first to do list item")
-        var seconditem = ToDoObject(title: "second item", description: "second item")
-
-        return [firstItem, seconditem]
     }
 
 }
