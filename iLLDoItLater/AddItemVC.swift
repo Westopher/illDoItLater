@@ -17,6 +17,8 @@ class AddItemVC: UIViewController {
     @IBOutlet weak var addButtonStyle: UIButton!
     
     @IBAction func addButtonPressed(_ sender: Any) {
+       
+        
         let NewToDoItem = ToDoObject(title: "\(titleTextField?.text ?? "No title added")", description: "\(descriptionTextField?.text ?? "No description added")")
         ToDoListItemsVC.toDosArray.append(NewToDoItem)
         ToDoListItemsVC.tableview.reloadData()

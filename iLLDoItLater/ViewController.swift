@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
 
     //making a variable that is an empty array of type todoobject so that you can put your list somewhere.
-    var toDosArray: [ToDoObject] = []
+    var toDosArray:Results<ToDoObject>?
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableview: UITableView!
@@ -20,6 +21,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.titleLabel.layer.cornerRadius = 10
         toDosArray = createToDos()
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL)
     }
 
     func createToDos() -> [ToDoObject] {
