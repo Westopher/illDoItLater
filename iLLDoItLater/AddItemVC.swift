@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AddItemVC: UIViewController {
 
@@ -17,7 +18,16 @@ class AddItemVC: UIViewController {
     @IBOutlet weak var addButtonStyle: UIButton!
     
     @IBAction func addButtonPressed(_ sender: Any) {
-       
+        
+        let toDoRealmObject = ToDoObject()
+        
+        toDoRealmObject.title = titleTextField?.text
+        toDoRealmObject.description = descriptionTextField?.text
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(ToDoObject)
+        }
         
         let NewToDoItem = ToDoObject(title: "\(titleTextField?.text ?? "No title added")", description: "\(descriptionTextField?.text ?? "No description added")")
         ToDoListItemsVC.toDosArray.append(NewToDoItem)

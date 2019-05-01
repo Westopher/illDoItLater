@@ -29,15 +29,15 @@ class ViewController: UIViewController {
     extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return toDosArray.count
+        return toDosArray == nil ? 0: toDosArray!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let toDo = toDosArray[indexPath.row]
+        let toDo = toDosArray?[indexPath.row]
         
-        cell.textLabel?.text = toDo.title
+        cell.textLabel?.text = toDo?.title
         
         return cell
     }
@@ -53,8 +53,8 @@ class ViewController: UIViewController {
             if segue.identifier == "DetailSegue" {
                 if let ViewItemVC = segue.destination as? ViewToDoListItemVC,
                     let ip = tableview.indexPathForSelectedRow {
-                    ViewItemVC.titleToDisplay = "\(toDosArray[ip.row].title)"
-                    ViewItemVC.descriptionToDisplay = "\(toDosArray[ip.row].description)"
+                    ViewItemVC.titleToDisplay = "\(toDosArray?[ip.row].title)"
+                    ViewItemVC.descriptionToDisplay = "\(toDosArray?[ip.row].description)"
                 }
             }
             
