@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
-class ToDoObject {
-    var title: String
-    var description: String
+class ToDoObject: Object {
+    @objc dynamic var title: String
+    @objc dynamic var description: String
     
-    init(title: String, description: String) {
+    convenience init(title: String, description: String) {
+        self.init()
         self.title = title
         self.description = description
+    }
+    
+    override static func indexedProperties() -> String {
+       return ["title"]
     }
 }
