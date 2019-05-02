@@ -13,7 +13,7 @@ class ToDoObject: Object {
     @objc dynamic var title = ""
     @objc dynamic var details = ""
     
-    override static func indexedProperties() -> String {
+    override static func indexedProperties() -> [String] {
        return ["title"]
     }
 }
