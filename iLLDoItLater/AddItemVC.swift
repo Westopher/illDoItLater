@@ -22,7 +22,7 @@ class AddItemVC: UIViewController {
         //create to do object and set its properties
         let toDoRealmObject = ToDoObject()
         toDoRealmObject.title = titleTextField?.text
-        toDoRealmObject.description = descriptionTextField?.text
+        toDoRealmObject.details = descriptionTextField?.text
         
         //reference the realm file then write the object to the realm file
         let realm = try! Realm()

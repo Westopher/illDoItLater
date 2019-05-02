@@ -11,7 +11,7 @@ import RealmSwift
 
 class ToDoObject: Object {
     @objc dynamic var title = ""
-    @objc dynamic var description = ""
+    @objc dynamic var details = ""
     
     override static func indexedProperties() -> String {
        return ["title"]
