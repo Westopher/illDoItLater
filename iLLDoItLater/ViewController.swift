@@ -48,7 +48,8 @@ class ViewController: UIViewController {
                 let addVC = segue.destination as! AddItemVC
                 addVC.ToDoListItemsVC = self
             }
-            
+}
+}
             //if the user taps on a list item, this sets the next page's labels
 //            if segue.identifier == "DetailSegue" {
 //                if let ViewItemVC = segue.destination as? ViewToDoListItemVC,
