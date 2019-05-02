@@ -21,8 +21,8 @@ class AddItemVC: UIViewController {
         
         //create to do object and set its properties
         let toDoRealmObject = ToDoObject()
-        toDoRealmObject.title = titleTextField!.text
-        toDoRealmObject.details = descriptionTextField!.text
+        toDoRealmObject.title = titleTextField!.text ?? "no title"
+        toDoRealmObject.details = descriptionTextField!.text ?? "no detail"
         
         //reference the realm file then write the object to the realm file
         let realm = try! Realm()
@@ -34,10 +34,10 @@ class AddItemVC: UIViewController {
         
         
         
-        let NewToDoItem = ToDoObject(title: "\(titleTextField?.text ?? "No title added")", description: "\(descriptionTextField?.text ?? "No description added")")
-        ToDoListItemsVC.toDosArray.append(NewToDoItem)
-        ToDoListItemsVC.tableview.reloadData()
-        navigationController?.popViewController(animated: true)
+//        let NewToDoItem = ToDoObject(title: "\(titleTextField?.text ?? "No title added")", description: "\(descriptionTextField?.text ?? "No description added")")
+//        ToDoListItemsVC.toDosArray.append(NewToDoItem)
+//        ToDoListItemsVC.tableview.reloadData()
+//        navigationController?.popViewController(animated: true)
         
     }
     
