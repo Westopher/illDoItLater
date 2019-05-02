@@ -18,11 +18,19 @@ class AddItemVC: UIViewController {
     @IBOutlet weak var addButtonStyle: UIButton!
     
     @IBAction func addButtonPressed(_ sender: Any) {
-        
         //create to do object and set its properties
         let toDoRealmObject = ToDoObject()
-        toDoRealmObject.title = titleTextField!.text ?? "no title"
-        toDoRealmObject.details = descriptionTextField!.text ?? "no detail"
+            if toDoRealmObject.title == toDoRealmObject.title {
+                toDoRealmObject.title = titleTextField!.text ?? "no title text"
+            } else {
+                print("no text for title")
+        }
+        
+            if toDoRealmObject.details == toDoRealmObject.details {
+                toDoRealmObject.details = descriptionTextField!.text ?? "no detail text"
+            } else {
+                print("no text for details")
+        }
         
         //reference the realm file then write the object to the realm file
         let realm = try! Realm()
