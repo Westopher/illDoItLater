@@ -38,15 +38,12 @@ class AddItemVC: UIViewController {
             realm.add(toDoRealmObject)
         }
         
+        let alertController = UIAlertController(title: "Item Added", message: "Return To Home Screen", preferredStyle: .alert)
+        let backToHome = UIAlertAction(title: "Return To Home Screen", style: .cancel, handler: { action in self.performSegue(withIdentifier: "addedBackToHome", sender: self)})
+        alertController.addAction(backToHome)
+        self.present(alertController, animated: true, completion: nil)
         
         print("add button pressed")
-        
-        
-        
-//        let NewToDoItem = ToDoObject(title: "\(titleTextField?.text ?? "No title added")", description: "\(descriptionTextField?.text ?? "No description added")")
-//        ToDoListItemsVC.toDosArray.append(NewToDoItem)
-//        ToDoListItemsVC.tableview.reloadData()
-//        navigationController?.popViewController(animated: true)
         
     }
     

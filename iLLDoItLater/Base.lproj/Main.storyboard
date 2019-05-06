@@ -174,11 +174,12 @@
                         <outlet property="addButtonStyle" destination="iln-9x-FOr" id="Vto-CN-hTY"/>
                         <outlet property="descriptionTextField" destination="WVD-tE-56B" id="kDH-mr-3wn"/>
                         <outlet property="titleTextField" destination="IDs-X7-dQe" id="V3H-LC-vGD"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="addedBackToHome" id="MMf-cE-RsS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDX-n6-Cfg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2055" y="-986"/>
+            <point key="canvasLocation" x="2409" y="-1381"/>
         </scene>
         <!--View To Do List ItemVC-->
         <scene sceneID="Ovm-3W-jwW">
@@ -221,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ad8-fX-9gW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2053.6231884057975" y="-261.16071428571428"/>
+            <point key="canvasLocation" x="2177" y="-12"/>
         </scene>
         <!--Delete AllVC-->
         <scene sceneID="3s4-MP-iet">
@@ -311,6 +312,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eUz-px-LbM"/>
+        <segue reference="MMf-cE-RsS"/>
     </inferredMetricsTieBreakers>
 </document>
