@@ -223,10 +223,10 @@
             </objects>
             <point key="canvasLocation" x="2053.6231884057975" y="-261.16071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Delete AllVC-->
         <scene sceneID="3s4-MP-iet">
             <objects>
-                <viewController id="Vqm-2T-80N" sceneMemberID="viewController">
+                <viewController id="Vqm-2T-80N" customClass="DeleteAllVC" customModule="iLLDoItLater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="23P-Xv-MAw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,6 +257,9 @@
                                         <state key="normal" title="Press To Delete">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="deleteButtonPressed:" destination="Vqm-2T-80N" eventType="touchUpInside" id="SWg-Ha-WJb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -275,6 +278,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uJB-4l-74B"/>
                     </view>
+                    <connections>
+                        <outlet property="deleteButton" destination="dYy-K2-YDt" id="oPV-yX-KZT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8uA-IV-FFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
