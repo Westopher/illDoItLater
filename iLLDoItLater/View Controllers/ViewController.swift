@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        tableview.reloadData()
     }
     
     override func viewDidLoad() {
