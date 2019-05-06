@@ -12,12 +12,12 @@ import RealmSwift
 class DeleteAllVC: UIViewController {
 
     @IBOutlet weak var deleteButton: UIButton!
-    
     @IBOutlet weak var titleLabelInDeleteVC: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.deleteButton.layer.cornerRadius = 10
-        self.titleLabelInDeleteCV.layer.cornerRadius = 10
+        self.titleLabelInDeleteVC.layer.cornerRadius = 10
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
