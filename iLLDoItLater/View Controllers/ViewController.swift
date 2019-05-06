@@ -33,12 +33,9 @@ class ViewController: UIViewController {
     func getListItemsFromRealm() {
         let realm = try! Realm()
         toDosArray = realm.objects(ToDoObject.self)
-        
         tableview.reloadData()
     }
     
-    
-
 }
 
     extension ViewController: UITableViewDataSource, UITableViewDelegate {

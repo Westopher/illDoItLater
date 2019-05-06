@@ -26,14 +26,13 @@ class DeleteAllVC: UIViewController {
             realm.deleteAll()
         }
         
+        let alertController = UIAlertController(title: "List Deleted", message: "Return To Home Screen", preferredStyle: .alert)
+        let backToHome = UIAlertAction(title: "Return To Home Screen", style: .cancel, handler: { action in self.performSegue(withIdentifier: "backToHome", sender: self)})
+        alertController.addAction(backToHome)
+        self.present(alertController, animated: true, completion: nil)
+        
         print("delete button pressed")
         
     }
-    
-    
-    
-    
-
-  
 
 }
