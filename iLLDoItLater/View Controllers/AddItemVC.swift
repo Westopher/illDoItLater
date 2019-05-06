@@ -38,6 +38,7 @@ class AddItemVC: UIViewController {
             realm.add(toDoRealmObject)
         }
         
+        
         print("add button pressed")
         
         
