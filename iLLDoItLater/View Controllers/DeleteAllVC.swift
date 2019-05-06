@@ -21,9 +21,12 @@ class DeleteAllVC: UIViewController {
     }
     
     @IBAction func deleteButtonPressed(_ sender: Any) {
-//        let realm = try! Realm()
-//        try! realm.write {
-//        }
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll()
+        }
+        
+        print("delete button pressed")
         
     }
     
