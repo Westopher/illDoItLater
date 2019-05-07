@@ -10,7 +10,6 @@ import UIKit
 import RealmSwift
 
 class ViewController: UIViewController {
-
     //making a variable that is an empty array of type todoobject so that you can put your list somewhere.
     var toDosArray:Results<ToDoObject>?
     
@@ -36,7 +35,26 @@ class ViewController: UIViewController {
         tableview.reloadData()
     }
     
+    //if user taps on the plus sign in the upper right to add a new list item, send them to the add item view
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "AddNewSegue" {
+            let addVC = segue.destination as! AddItemVC
+            addVC.ToDoListItemsVC = self
+        }
+        
+        //if the user taps on a list item, this sets the next page's labels
+        if segue.identifier == "DetailSegue" {
+            if let ViewItemVC = segue.destination as? ViewToDoListItemVC, let ip = tableview.indexPathForSelectedRow {
+                ViewItemVC.titleToDisplay = "\(toDosArray?[ip.row].title)"
+                ViewItemVC.descriptionToDisplay = "\(toDosArray?[ip.row].description)"
+            }
+        }
+    }
+    
 }
+
+
 
     extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -51,30 +69,10 @@ class ViewController: UIViewController {
         }
         return cell
     }
-    
         
-        
-        
-        
-        
-        
-        
-        
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            //if the user taps on the plus sign in the upper right to add a new list item, send them to the add item view
-            if segue.identifier == "AddNewSegue" {
-                let addVC = segue.destination as! AddItemVC
-                addVC.ToDoListItemsVC = self
-            }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            performSegue(withIdentifier: "DetailSegue", sender: nil)
         }
+    
     }
-
-//            //if the user taps on a list item, this sets the next page's labels
-//            if segue.identifier == "DetailSegue" {
-//                if let ViewItemVC = segue.destination as? ViewToDoListItemVC,
-//                    let ip = tableview.indexPathForSelectedRow {
-//                    ViewItemVC.titleToDisplay = "\(toDosArray?[ip.row].title)"
-//                    ViewItemVC.descriptionToDisplay = "\(toDosArray?[ip.row].description)"
-//                }
-//            }
 
