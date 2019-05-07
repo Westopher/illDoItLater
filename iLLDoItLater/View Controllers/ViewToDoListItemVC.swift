@@ -11,6 +11,8 @@ import RealmSwift
 
 class ViewToDoListItemVC: UIViewController {
 
+    @IBOutlet weak var titleLabelViewItem: UILabel!
+    
     var titleToDisplay: String?
     var descriptionToDisplay: String?
     
@@ -18,10 +20,13 @@ class ViewToDoListItemVC: UIViewController {
     @IBOutlet weak var descriptionItemLabel: UILabel!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         titleItemLabel.text = titleToDisplay
         descriptionItemLabel.text = descriptionToDisplay
+        
+        self.titleLabelViewItem.layer.cornerRadius = 10
     }
     
 
