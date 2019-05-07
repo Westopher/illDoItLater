@@ -40,7 +40,7 @@ class AddItemVC: UIViewController {
         }
         
         let alertController = UIAlertController(title: "Item Added", message: "Return To Home Screen", preferredStyle: .alert)
-        let backToHome = UIAlertAction(title: "Return To Home Screen", style: .cancel, handler: { action in self.performSegue(withIdentifier: "addedBackToHome", sender: self)})
+        let backToHome = UIAlertAction(title: "Continue", style: .cancel, handler: { action in self.performSegue(withIdentifier: "addedBackToHome", sender: self)})
         alertController.addAction(backToHome)
         self.present(alertController, animated: true, completion: nil)
         

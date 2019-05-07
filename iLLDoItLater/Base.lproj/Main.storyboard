@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cbp-vO-IDc">
-                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <rect key="frame" x="0.0" y="210" width="414" height="652"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="105" id="zb9-z9-NNF">
@@ -40,20 +40,31 @@
                                 <rect key="frame" x="5" y="49" width="404" height="90"/>
                                 <color key="backgroundColor" red="0.86764843845125394" green="0.20508202828525804" blue="0.16654008358508707" alpha="0.40357448630136988" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="LL3-FC-cJb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="44"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.89465685150950092" green="0.89465685150950092" blue="0.89465685150950092" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6p-yi-vom">
+                                <rect key="frame" x="0.0" y="169" width="414" height="31"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1P7-W3-faM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="1Cj-dD-jn7"/>
+                            <constraint firstItem="cbp-vO-IDc" firstAttribute="top" secondItem="t6p-yi-vom" secondAttribute="bottom" constant="10" id="8Al-bc-o4o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cbp-vO-IDc" secondAttribute="trailing" id="97Q-ZL-8X0"/>
+                            <constraint firstItem="t6p-yi-vom" firstAttribute="top" secondItem="1P7-W3-faM" secondAttribute="bottom" constant="30" id="FeJ-Rc-61z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t6p-yi-vom" secondAttribute="trailing" id="HCh-iE-bCg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1P7-W3-faM" secondAttribute="trailing" constant="5" id="POz-0g-dPg"/>
-                            <constraint firstItem="cbp-vO-IDc" firstAttribute="top" secondItem="1P7-W3-faM" secondAttribute="bottom" constant="5" id="fiI-Rb-K1J"/>
-                            <constraint firstItem="cbp-vO-IDc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="nDk-dT-3FC"/>
+                            <constraint firstItem="t6p-yi-vom" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lcd-ll-GtJ"/>
                             <constraint firstItem="1P7-W3-faM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="u8F-r1-wSB"/>
                             <constraint firstItem="cbp-vO-IDc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xhT-76-oB1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cbp-vO-IDc" secondAttribute="bottom" id="zlr-Hh-HBv"/>
@@ -164,8 +175,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Your To Do List Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ej-uT-6TT">
-                                <rect key="frame" x="83.5" y="169" width="247.5" height="30.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <rect key="frame" x="76.5" y="169" width="261" height="30.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -329,6 +340,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Z5m-hN-RmU"/>
         <segue reference="MMf-cE-RsS"/>
     </inferredMetricsTieBreakers>
 </document>
