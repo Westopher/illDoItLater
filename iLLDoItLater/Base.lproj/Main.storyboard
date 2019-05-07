@@ -277,7 +277,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="zJs-2G-xA7" userLabel="Buttons Stack">
-                                <rect key="frame" x="20" y="504.66666666666674" width="374" height="217"/>
+                                <rect key="frame" x="20" y="585" width="374" height="217"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RT4-LP-TCw">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="67"/>
@@ -295,13 +295,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CK9-MO-6gN">
-                                        <rect key="frame" x="0.0" y="91.999999999999943" width="374" height="33"/>
+                                        <rect key="frame" x="0.0" y="92" width="374" height="33"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jd4-uh-yrl">
-                                        <rect key="frame" x="0.0" y="149.99999999999994" width="374" height="67"/>
+                                        <rect key="frame" x="0.0" y="150" width="374" height="67"/>
                                         <color key="backgroundColor" red="0.70588235290000001" green="0.81176470590000005" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="67" id="XDH-SC-2fb"/>
@@ -329,12 +329,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AiS-Ww-UnT" firstAttribute="trailing" secondItem="sYz-k4-QZB" secondAttribute="trailing" constant="20" id="2ak-hA-we6"/>
-                            <constraint firstItem="zJs-2G-xA7" firstAttribute="top" secondItem="sYz-k4-QZB" secondAttribute="bottom" constant="40" id="7IT-jq-of1"/>
                             <constraint firstItem="sYz-k4-QZB" firstAttribute="leading" secondItem="AiS-Ww-UnT" secondAttribute="leading" constant="20" id="9Vr-ch-XMe"/>
                             <constraint firstItem="0hI-zz-6L1" firstAttribute="top" secondItem="AiS-Ww-UnT" secondAttribute="top" constant="5" id="FEQ-RT-RC8"/>
                             <constraint firstItem="0hI-zz-6L1" firstAttribute="leading" secondItem="AiS-Ww-UnT" secondAttribute="leading" constant="5" id="Fhq-b2-9l4"/>
                             <constraint firstItem="j5M-td-nqJ" firstAttribute="top" secondItem="0hI-zz-6L1" secondAttribute="bottom" constant="30" id="SyC-Pf-Qpe"/>
                             <constraint firstItem="AiS-Ww-UnT" firstAttribute="trailing" secondItem="0hI-zz-6L1" secondAttribute="trailing" constant="5" id="Thi-gZ-Ozb"/>
+                            <constraint firstItem="AiS-Ww-UnT" firstAttribute="bottom" secondItem="zJs-2G-xA7" secondAttribute="bottom" constant="60" id="VOY-hN-acQ"/>
                             <constraint firstItem="zJs-2G-xA7" firstAttribute="centerX" secondItem="OzD-qQ-zDP" secondAttribute="centerX" id="b9A-M3-40u"/>
                             <constraint firstItem="AiS-Ww-UnT" firstAttribute="trailing" secondItem="zJs-2G-xA7" secondAttribute="trailing" constant="20" id="e3R-XA-PcL"/>
                             <constraint firstItem="j5M-td-nqJ" firstAttribute="leading" secondItem="AiS-Ww-UnT" secondAttribute="leading" constant="20" id="efk-t0-BNO"/>
@@ -346,6 +346,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionItemLabel" destination="UfQ-LX-dVb" id="JWM-0P-HdX"/>
+                        <outlet property="editItemButton" destination="RT4-LP-TCw" id="ZQq-fb-noD"/>
                         <outlet property="emailToYourselfButton" destination="jd4-uh-yrl" id="kVo-65-k3O"/>
                         <outlet property="titleItemLabel" destination="ovz-au-LGV" id="DS2-dS-zSa"/>
                         <outlet property="titleLabelViewItem" destination="0hI-zz-6L1" id="TQ8-GB-pSg"/>

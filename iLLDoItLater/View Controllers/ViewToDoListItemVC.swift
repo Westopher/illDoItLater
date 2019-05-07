@@ -13,6 +13,7 @@ class ViewToDoListItemVC: UIViewController {
 
     @IBOutlet weak var titleLabelViewItem: UILabel!
     @IBOutlet weak var emailToYourselfButton: UIButton!
+    @IBOutlet weak var editItemButton: UIButton!
     
     
     var titleToDisplay: String?
@@ -30,6 +31,7 @@ class ViewToDoListItemVC: UIViewController {
         
         self.titleLabelViewItem.layer.cornerRadius = 10
         self.emailToYourselfButton.layer.cornerRadius = 10
+        self.editItemButton.layer.cornerRadius = 10
     }
     
 
