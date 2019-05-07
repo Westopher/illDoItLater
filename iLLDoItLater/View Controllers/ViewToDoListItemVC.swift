@@ -11,8 +11,8 @@ import RealmSwift
 
 class ViewToDoListItemVC: UIViewController {
 
-    var titleToDisplay: String!
-    var descriptionToDisplay: String!
+    var titleToDisplay: String?
+    var descriptionToDisplay: String?
     
     @IBOutlet weak var titleItemLabel: UILabel!
     @IBOutlet weak var descriptionItemLabel: UILabel!
