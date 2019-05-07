@@ -11,6 +11,7 @@ import RealmSwift
 
 class AddItemVC: UIViewController {
 
+    @IBOutlet weak var titleLabelAddItem: UILabel!
     var ToDoListItemsVC = ViewController()
     
     @IBOutlet weak var titleTextField: UITextField!
@@ -50,6 +51,7 @@ class AddItemVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addButtonStyle.layer.cornerRadius = 10
+        self.titleLabelAddItem.layer.cornerRadius = 10
     }
 
 }
