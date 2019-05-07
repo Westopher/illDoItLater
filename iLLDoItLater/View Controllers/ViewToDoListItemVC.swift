@@ -34,5 +34,11 @@ class ViewToDoListItemVC: UIViewController {
         self.editItemButton.layer.cornerRadius = 10
     }
     
+    
+    @IBAction func editButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "editSegue", sender: Any?.self)
+    }
+    
+    
 
 }
