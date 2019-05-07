@@ -48,7 +48,7 @@ class ViewController: UIViewController {
             if let ViewItemVC = segue.destination as? ViewToDoListItemVC,
                     let ip = tableview.indexPathForSelectedRow {
                 ViewItemVC.titleToDisplay = "\(toDosArray?[ip.row].title ?? "No Title")"
-                ViewItemVC.descriptionToDisplay = "\(toDosArray?[ip.row].description ?? "No Description")"
+                ViewItemVC.descriptionToDisplay = "\(toDosArray?[ip.row].details ?? "No Description")"
             }
         }
     }
