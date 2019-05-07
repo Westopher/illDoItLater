@@ -12,6 +12,8 @@ import RealmSwift
 class ViewToDoListItemVC: UIViewController {
 
     @IBOutlet weak var titleLabelViewItem: UILabel!
+    @IBOutlet weak var emailToYourselfButton: UIButton!
+    
     
     var titleToDisplay: String?
     var descriptionToDisplay: String?
@@ -27,6 +29,7 @@ class ViewToDoListItemVC: UIViewController {
         descriptionItemLabel.text = descriptionToDisplay
         
         self.titleLabelViewItem.layer.cornerRadius = 10
+        self.emailToYourselfButton.layer.cornerRadius = 10
     }
     
 
