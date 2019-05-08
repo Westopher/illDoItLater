@@ -19,8 +19,11 @@ class EditVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.finishEditingButtonPressed.layer.cornerRadius = 10
+        editTitle.text = "hello"
     }
     
+    @IBAction func finishEditingButton(_ sender: Any) {
+    }
     
 
    

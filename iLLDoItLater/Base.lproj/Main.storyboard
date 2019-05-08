@@ -518,6 +518,7 @@
                                 <connections>
                                     <action selector="deleteButtonPressed:" destination="Vqm-2T-80N" eventType="touchUpInside" id="nuZ-er-R3b"/>
                                     <action selector="editButtonPressed:" destination="YR2-ZH-zLN" eventType="touchUpInside" id="jbO-b5-rb5"/>
+                                    <action selector="finishEditingButton:" destination="pBn-UF-KfO" eventType="touchUpInside" id="Iuy-8o-Pdt"/>
                                 </connections>
                             </button>
                         </subviews>
