@@ -15,9 +15,10 @@ class ViewToDoListItemVC: UIViewController {
     @IBOutlet weak var emailToYourselfButton: UIButton!
     @IBOutlet weak var editItemButton: UIButton!
     
+   
     
-    var titleToDisplay: String?
-    var descriptionToDisplay: String?
+//    var titleToDisplay: String?
+//    var descriptionToDisplay: String?
     
     @IBOutlet weak var titleItemLabel: UILabel!
     @IBOutlet weak var descriptionItemLabel: UILabel!
