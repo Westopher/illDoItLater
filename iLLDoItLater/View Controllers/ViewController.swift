@@ -12,14 +12,13 @@ import RealmSwift
 class ViewController: UIViewController {
     //making a variable that is an empty array of type todoobject so that you can put your list somewhere.
     var toDosArray:Results<ToDoObject>?
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableview: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
         tableview.reloadData()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.titleLabel.layer.cornerRadius = 10
@@ -28,13 +27,11 @@ class ViewController: UIViewController {
         print(Realm.Configuration.defaultConfiguration.fileURL)
     }
     
-    
     func getListItemsFromRealm() {
         let realm = try! Realm()
         toDosArray = realm.objects(ToDoObject.self)
         tableview.reloadData()
     }
-    
     //if user taps on the plus sign in the upper right to add a new list item, send them to the add item view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -54,8 +51,6 @@ class ViewController: UIViewController {
     }
     
 }
-
-
     extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

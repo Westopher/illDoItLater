@@ -351,7 +351,6 @@
                         <outlet property="emailToYourselfButton" destination="jd4-uh-yrl" id="kVo-65-k3O"/>
                         <outlet property="titleItemLabel" destination="ovz-au-LGV" id="DS2-dS-zSa"/>
                         <outlet property="titleLabelViewItem" destination="0hI-zz-6L1" id="TQ8-GB-pSg"/>
-                        <segue destination="pBn-UF-KfO" kind="show" identifier="editSegue" id="FVJ-nT-puW"/>
                         <segue destination="0xj-7V-zUK" kind="show" identifier="emailSegue" id="wwL-5b-Qhx"/>
                     </connections>
                 </viewController>
@@ -446,105 +445,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8uA-IV-FFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2998.5507246376815" y="-654.24107142857144"/>
-        </scene>
-        <!--EditVC-->
-        <scene sceneID="B7I-Qg-Rwr">
-            <objects>
-                <viewController id="pBn-UF-KfO" customClass="EditVC" customModule="iLLDoItLater" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kPc-3q-o1q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'll Do It Later" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtV-Et-Yri">
-                                <rect key="frame" x="5" y="93" width="404" height="90"/>
-                                <color key="backgroundColor" red="0.86764843849999995" green="0.2050820283" blue="0.1665400836" alpha="0.40357448629999998" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="GTD-dp-s7W"/>
-                                    <constraint firstAttribute="height" constant="90" id="zsK-sI-Mgw"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="44"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.89465685149999996" green="0.89465685149999996" blue="0.89465685149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Your List Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5W-da-QPT">
-                                <rect key="frame" x="5" y="193" width="404" height="31"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nre-iT-sBP" userLabel="Title">
-                                <rect key="frame" x="20" y="254" width="374" height="30.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFn-k2-ys3" userLabel="Details">
-                                <rect key="frame" x="20" y="330" width="374" height="30.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2pg-Zg-eob">
-                                <rect key="frame" x="20" y="292" width="374" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ikh-Fg-FbG">
-                                <rect key="frame" x="20" y="368" width="374" height="197"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiN-LL-oRm">
-                                <rect key="frame" x="20" y="816" width="374" height="50"/>
-                                <color key="backgroundColor" red="0.70588235290000001" green="0.81176470590000005" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Kup-EY-YwI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="28"/>
-                                <size key="titleShadowOffset" width="4" height="0.0"/>
-                                <state key="normal" title="Finish Editing">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="deleteButtonPressed:" destination="Vqm-2T-80N" eventType="touchUpInside" id="nuZ-er-R3b"/>
-                                    <action selector="editButtonPressed:" destination="YR2-ZH-zLN" eventType="touchUpInside" id="jbO-b5-rb5"/>
-                                    <action selector="finishEditingButton:" destination="pBn-UF-KfO" eventType="touchUpInside" id="Iuy-8o-Pdt"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="FOC-QM-bcS" firstAttribute="trailing" secondItem="jiN-LL-oRm" secondAttribute="trailing" constant="20" id="4tE-xV-PaD"/>
-                            <constraint firstItem="jiN-LL-oRm" firstAttribute="leading" secondItem="FOC-QM-bcS" secondAttribute="leading" constant="20" id="8fL-Un-JU5"/>
-                            <constraint firstItem="FOC-QM-bcS" firstAttribute="trailing" secondItem="JtV-Et-Yri" secondAttribute="trailing" constant="5" id="Ppp-gT-QrB"/>
-                            <constraint firstItem="x5W-da-QPT" firstAttribute="top" secondItem="JtV-Et-Yri" secondAttribute="bottom" constant="10" id="PtW-g8-YH7"/>
-                            <constraint firstItem="x5W-da-QPT" firstAttribute="leading" secondItem="FOC-QM-bcS" secondAttribute="leading" constant="5" id="Xd7-ce-DTI"/>
-                            <constraint firstItem="JtV-Et-Yri" firstAttribute="leading" secondItem="FOC-QM-bcS" secondAttribute="leading" constant="5" id="bPD-Bi-AS5"/>
-                            <constraint firstItem="FOC-QM-bcS" firstAttribute="trailing" secondItem="x5W-da-QPT" secondAttribute="trailing" constant="5" id="ltU-5M-NtI"/>
-                            <constraint firstItem="JtV-Et-Yri" firstAttribute="top" secondItem="FOC-QM-bcS" secondAttribute="top" constant="5" id="tNb-sS-JMk"/>
-                            <constraint firstAttribute="bottom" secondItem="jiN-LL-oRm" secondAttribute="bottom" constant="30" id="vnN-FH-9Yn"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="FOC-QM-bcS"/>
-                    </view>
-                    <connections>
-                        <outlet property="editDetails" destination="Ikh-Fg-FbG" id="Bdz-Lu-NUf"/>
-                        <outlet property="editTitle" destination="2pg-Zg-eob" id="a66-Xm-wuv"/>
-                        <outlet property="finishEditingButtonPressed" destination="jiN-LL-oRm" id="Isd-sH-Iav"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KVx-5U-9Rk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4260.8695652173919" y="-13.392857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nXC-Br-NjV">
