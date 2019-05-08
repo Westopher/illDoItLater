@@ -421,6 +421,11 @@
                                     <constraint firstAttribute="trailing" secondItem="dYy-K2-YDt" secondAttribute="trailing" id="szs-6V-fiR"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXs-5N-myh">
+                                <rect key="frame" x="163" y="579" width="182" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -440,12 +445,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8uA-IV-FFO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2999" y="-654"/>
+            <point key="canvasLocation" x="2998.5507246376815" y="-654.24107142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--EditVC-->
         <scene sceneID="B7I-Qg-Rwr">
             <objects>
-                <viewController id="pBn-UF-KfO" sceneMemberID="viewController">
+                <viewController id="pBn-UF-KfO" customClass="EditVC" customModule="iLLDoItLater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kPc-3q-o1q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -530,6 +535,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FOC-QM-bcS"/>
                     </view>
+                    <connections>
+                        <outlet property="finishEditingButtonPressed" destination="jiN-LL-oRm" id="Isd-sH-Iav"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVx-5U-9Rk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
