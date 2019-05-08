@@ -536,6 +536,8 @@
                         <viewLayoutGuide key="safeArea" id="FOC-QM-bcS"/>
                     </view>
                     <connections>
+                        <outlet property="editDetails" destination="Ikh-Fg-FbG" id="Bdz-Lu-NUf"/>
+                        <outlet property="editTitle" destination="2pg-Zg-eob" id="a66-Xm-wuv"/>
                         <outlet property="finishEditingButtonPressed" destination="jiN-LL-oRm" id="Isd-sH-Iav"/>
                     </connections>
                 </viewController>
