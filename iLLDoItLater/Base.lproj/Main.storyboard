@@ -365,6 +365,8 @@
                         <viewLayoutGuide key="safeArea" id="AiS-Ww-UnT"/>
                     </view>
                     <connections>
+                        <outlet property="displayDescription" destination="A27-oI-QBb" id="H3t-JV-npe"/>
+                        <outlet property="displayTitle" destination="vdi-Yw-Ry3" id="Yh2-2e-4xe"/>
                         <outlet property="editItemButton" destination="RT4-LP-TCw" id="ZQq-fb-noD"/>
                         <outlet property="emailToYourselfButton" destination="jd4-uh-yrl" id="kVo-65-k3O"/>
                         <outlet property="titleLabelViewItem" destination="0hI-zz-6L1" id="TQ8-GB-pSg"/>

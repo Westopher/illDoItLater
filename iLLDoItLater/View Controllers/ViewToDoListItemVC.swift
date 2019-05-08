@@ -17,8 +17,11 @@ class ViewToDoListItemVC: UIViewController {
     
    
     
-//    var titleToDisplay: String?
-//    var descriptionToDisplay: String?
+    @IBOutlet weak var displayTitle: UITextField!
+    @IBOutlet weak var displayDescription: UITextView!
+    
+    var titleToDisplay: String?
+    var descriptionToDisplay: String?
     
     @IBOutlet weak var titleItemLabel: UILabel!
     @IBOutlet weak var descriptionItemLabel: UILabel!
@@ -27,8 +30,8 @@ class ViewToDoListItemVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleItemLabel.text = titleToDisplay
-        descriptionItemLabel.text = descriptionToDisplay
+        titleItemLabel.text = "\(displayTitle)"
+        descriptionItemLabel.text = "\(displayDescription)"
         
         self.titleLabelViewItem.layer.cornerRadius = 10
         self.emailToYourselfButton.layer.cornerRadius = 10
