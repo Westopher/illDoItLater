@@ -9,9 +9,31 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UpdateDataDelegate {
+    
+    func updatedData(_ title: String, _ description: String) {
+        print(self.description, "received \(title) and \(description)")
+        
+        var updatedRealmObject = ToDoObject()
+        
+        updatedData(title, description)
+        
+        updatedRealmObject.title = updatedData(title)
+        updatedRealmObject.description = updatedData(description)
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(updatedRealmObject)
+        }
+        
+        tableview.reloadData()
+        //save it here
+        print(toDosArray)
+    }
+    
     //making a variable that is an empty array of type todoobject so that you can put your list somewhere.
     var toDosArray:Results<ToDoObject>?
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableview: UITableView!
     
@@ -42,8 +64,8 @@ class ViewController: UIViewController {
         
         //if the user taps on a list item, this sets the next page's labels
         if segue.identifier == "DetailSegue" {
-            if let ViewItemVC = segue.destination as? ViewToDoListItemVC,
-                    let ip = tableview.indexPathForSelectedRow {
+            if let ViewItemVC = segue.destination as? ViewToDoListItemVC, let ip = tableview.indexPathForSelectedRow {
+                ViewItemVC.delegate = self
                 ViewItemVC.titleToDisplay = "\(toDosArray?[ip.row].title ?? "No Title")"
                 ViewItemVC.descriptionToDisplay = "\(toDosArray?[ip.row].details ?? "No Description")"
             }
@@ -57,6 +79,10 @@ class ViewController: UIViewController {
         return toDosArray == nil ? 0: toDosArray!.count
     }
     
+        func numberOfSections(in tableView: UITableView) -> Int {
+            return 1
+        }
+        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         if toDosArray != nil {
@@ -66,7 +92,8 @@ class ViewController: UIViewController {
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            performSegue(withIdentifier: "DetailSegue", sender: nil)
+        performSegue(withIdentifier: "DetailSegue", sender: nil)
+        print("didselectrow: \(indexPath)")
         }
     
     }

@@ -310,8 +310,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="deleteButtonPressed:" destination="Vqm-2T-80N" eventType="touchUpInside" id="whz-5R-PCP"/>
-                                            <action selector="editButtonPressed:" destination="YR2-ZH-zLN" eventType="touchUpInside" id="3hx-rw-Gpt"/>
+                                            <action selector="editButtonPressed:" destination="YR2-ZH-zLN" eventType="touchUpInside" id="M2W-Ul-7l5"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CK9-MO-6gN">

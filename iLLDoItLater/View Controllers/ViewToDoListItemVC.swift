@@ -9,6 +9,10 @@
 import UIKit
 import RealmSwift
 
+protocol UpdateDataDelegate {
+    func updatedData(_ title: String, _ description: String)
+}
+
 class ViewToDoListItemVC: UIViewController {
 
     @IBOutlet weak var titleLabelViewItem: UILabel!
@@ -16,22 +20,19 @@ class ViewToDoListItemVC: UIViewController {
     @IBOutlet weak var editItemButton: UIButton!
     
    
-    
     @IBOutlet weak var displayTitle: UITextField!
     @IBOutlet weak var displayDescription: UITextView!
     
     var titleToDisplay: String?
     var descriptionToDisplay: String?
     
-    @IBOutlet weak var titleItemLabel: UILabel!
-    @IBOutlet weak var descriptionItemLabel: UILabel!
-    
+    var delegate: UpdateDataDelegate?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleItemLabel.text = "\(displayTitle)"
-        descriptionItemLabel.text = "\(displayDescription)"
+        displayTitle.text = "\(titleToDisplay)"
+        displayDescription.text = "\(descriptionToDisplay)"
         
         self.titleLabelViewItem.layer.cornerRadius = 10
         self.emailToYourselfButton.layer.cornerRadius = 10
@@ -40,7 +41,13 @@ class ViewToDoListItemVC: UIViewController {
     
     
     @IBAction func editButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "editSegue", sender: Any?.self)
+        
+        self.navigationController?.popViewController(animated: true)
+            guard let myTitle = self.displayTitle.text, let description = self.displayDescription.text else {
+                    return
+                }
+            print("about to call delegate method with \(myTitle) and \(description)")
+                self.delegate?.updatedData(myTitle, description)
     }
     
     
