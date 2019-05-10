@@ -22,8 +22,6 @@ class ViewController: UIViewController, UpdateDataDelegate {
             try! realm.write {
                 realm.add(updatedRealmObject)
            }
-
-        
         
         tableview.reloadData()
         print(toDosArray)
