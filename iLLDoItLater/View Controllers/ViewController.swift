@@ -15,19 +15,17 @@ class ViewController: UIViewController, UpdateDataDelegate {
         print(self.description, "received \(title) and \(description)")
         
         var updatedRealmObject = ToDoObject()
-        
-        updatedData(title, description)
-        
-        updatedRealmObject.title = updatedData(title)
-        updatedRealmObject.description = updatedData(description)
+        updatedRealmObject.title = title
+        updatedRealmObject.details = description
         
         let realm = try! Realm()
-        try! realm.write {
-            realm.add(updatedRealmObject)
-        }
+            try! realm.write {
+                realm.add(updatedRealmObject)
+           }
+
+        
         
         tableview.reloadData()
-        //save it here
         print(toDosArray)
     }
     
