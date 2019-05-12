@@ -11,11 +11,8 @@ import RealmSwift
 
 class ViewController: UIViewController, UpdateDataDelegate {
     
-    func updatedData(_ title: String, _ description: String) {
-        print(self.description, "received \(title) and \(description)")
-        
-        // update just adds new objects. I need to add a primary key and use that to update
-        
+    func updatedData(_ title: String, _ description: String, primeKey: String) {
+        print(self.description, "received \(title) and \(description), \(primeKey)")
         
         var updatedRealmObject = ToDoObject()
         updatedRealmObject.title = title

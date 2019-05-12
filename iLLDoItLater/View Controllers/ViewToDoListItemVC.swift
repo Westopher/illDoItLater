@@ -46,11 +46,12 @@ class ViewToDoListItemVC: UIViewController {
         
         let myPrimeKey: String
         
-        guard let myTitle = self.displayTitle.text, let description = self.displayDescription.text, let primeKey = myPrimeKey else {
+        guard let myTitle = self.displayTitle.text, let description = self.displayDescription.text  else {
                     return
                 }
-            print("about to call delegate method with \(myTitle), \(description), \(primeKey)")
-                self.delegate?.updatedData(myTitle, description)
+        
+        print("about to call delegate method with \(myTitle), \(description), \(primeKey)")
+                self.delegate?.updatedData(myTitle, description, primeKey)
     }
     
     

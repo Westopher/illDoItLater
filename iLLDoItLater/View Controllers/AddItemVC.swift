@@ -33,12 +33,12 @@ class AddItemVC: UIViewController {
                 print("no text for details")
         }
         
-        //toDoRealmObject.primeKey
+        print(toDoRealmObject.primeKey)
         
         //reference the realm file then write the object to the realm file
         let realm = try! Realm()
         try! realm.write {
-            realm.add(toDoRealmObject)
+            realm.add(toDoRealmObject, update: true)
         }
         
         let alertController = UIAlertController(title: "Item Added", message: "Return To Home Screen", preferredStyle: .alert)
