@@ -12,12 +12,14 @@ import RealmSwift
 class ToDoObject: Object {
     @objc dynamic var title = ""
     @objc dynamic var details = ""
-    @objc dynamic var primeKey = 0
+    @objc dynamic var primeKey = UUID().uuidString
     
+    //if you want to search by some identifier to group the results
     override static func indexedProperties() -> [String] {
        return ["title"]
     }
     
+    //a unique identifier
     override static func primaryKey() -> String {
         return "primeKey"
     }
