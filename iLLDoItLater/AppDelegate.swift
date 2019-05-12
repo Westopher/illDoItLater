@@ -27,11 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             migrationBlock: { migration, oldSchemaVersion in
                 // We haven’t migrated anything yet, so oldSchemaVersion == 0
                 if (oldSchemaVersion < 2) {
-                    var oldId = 0
+                    var oldId: Int
                     var newId = ""
                     
                     migration.enumerateObjects(ofType: ToDoObject.className()) { oldObject, newObject in
-                        oldObject!["primeKey"] = oldID
+                        oldObject!["primeKey"] = oldId
                         newObject!["primeKey"] = newId
                         
                     
