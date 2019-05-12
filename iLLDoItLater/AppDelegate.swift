@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if (oldSchemaVersion < 1) {
                     var nextID = 0
                     migration.enumerateObjects(ofType: ToDoObject.className()) { oldObject, newObject in
-                        newObject!["id"] = nextID
+                        newObject!["primeKey"] = nextID
                         nextID += 1
                     
                     // Nothing to do!
