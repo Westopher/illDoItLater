@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 protocol UpdateDataDelegate {
-    func updatedData(_ title: String, _ description: String)
+    func updatedData(_ title: String, _ description: String, _ primeKey: String)
 }
 
 class ViewToDoListItemVC: UIViewController {
@@ -43,10 +43,13 @@ class ViewToDoListItemVC: UIViewController {
     @IBAction func editButtonPressed(_ sender: Any) {
         
         self.navigationController?.popViewController(animated: true)
-            guard let myTitle = self.displayTitle.text, let description = self.displayDescription.text else {
+        
+        let myPrimeKey: String
+        
+        guard let myTitle = self.displayTitle.text, let description = self.displayDescription.text, let primeKey = myPrimeKey else {
                     return
                 }
-            print("about to call delegate method with \(myTitle) and \(description)")
+            print("about to call delegate method with \(myTitle), \(description), \(primeKey)")
                 self.delegate?.updatedData(myTitle, description)
     }
     
