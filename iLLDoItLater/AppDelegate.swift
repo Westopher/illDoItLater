@@ -27,10 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             migrationBlock: { migration, oldSchemaVersion in
                 // We haven’t migrated anything yet, so oldSchemaVersion == 0
                 if (oldSchemaVersion < 1) {
-                    var nextID = 0
+                    var oldId = 0
+                    var newId = ""
+                    
                     migration.enumerateObjects(ofType: ToDoObject.className()) { oldObject, newObject in
-                        newObject!["primeKey"] = nextID
-                        nextID += 1
+                        oldObject!["primeKey"] = nextID
+                        newObject!["primeKey"] = newId
+                        
                     
                     // Nothing to do!
                     // Realm will automatically detect new properties and removed properties

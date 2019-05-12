@@ -33,7 +33,7 @@ class AddItemVC: UIViewController {
                 print("no text for details")
         }
         
-        toDoRealmObject.primeKey
+        //toDoRealmObject.primeKey
         
         //reference the realm file then write the object to the realm file
         let realm = try! Realm()
