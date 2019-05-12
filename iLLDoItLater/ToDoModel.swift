@@ -12,7 +12,7 @@ import RealmSwift
 class ToDoObject: Object {
     @objc dynamic var title = ""
     @objc dynamic var details = ""
-    @objc dynamic var primeKey = ""
+    @objc dynamic var primeKey = 0
     
     override static func indexedProperties() -> [String] {
        return ["title"]
