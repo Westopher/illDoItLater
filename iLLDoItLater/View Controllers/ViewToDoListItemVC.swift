@@ -51,7 +51,7 @@ class ViewToDoListItemVC: UIViewController {
                 }
         
         print("about to call delegate method with \(myTitle), \(description), \(primeKeyHolder)")
-        self.delegate?.updatedData(myTitle, description, primeKeyHolder)
+        self.delegate?.updatedData(myTitle, description, primeKeyHolder ?? "no prime key")
     }
     
     
