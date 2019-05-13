@@ -28,7 +28,7 @@ class ViewToDoListItemVC: UIViewController {
     
     var delegate: UpdateDataDelegate?
     
-    var primeKeyHolder:String?
+    var primeKey:String?
     
     
     override func viewDidLoad() {
@@ -50,8 +50,8 @@ class ViewToDoListItemVC: UIViewController {
                     return
                 }
         
-        print("about to call delegate method with \(myTitle), \(description), \(primeKeyHolder)")
-        self.delegate?.updatedData(myTitle, description, primeKeyHolder ?? "no prime key")
+        print("about to call delegate method with \(myTitle), \(description), \(primeKey)")
+        self.delegate?.updatedData(myTitle, description, primeKey ?? "no prime key")
     }
     
     

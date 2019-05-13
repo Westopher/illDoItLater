@@ -23,7 +23,7 @@ class ViewController: UIViewController, UpdateDataDelegate {
         let realm = try! Realm()
         
         try! realm.write {
-            realm.create(ToDoObject.self, value: ["title": updatedRealmObject.title, "description": updatedRealmObject.details, "primeKeyHolder": updatedRealmObject.primeKey], update: true)
+            realm.create(ToDoObject.self, value: ["title": updatedRealmObject.title, "description": updatedRealmObject.details, "primeKey": updatedRealmObject.primeKey], update: true)
         }
     
         
@@ -70,7 +70,7 @@ class ViewController: UIViewController, UpdateDataDelegate {
                 ViewItemVC.delegate = self
                 ViewItemVC.titleToDisplay = "\(toDosArray?[ip.row].title ?? "No Title")"
                 ViewItemVC.descriptionToDisplay = "\(toDosArray?[ip.row].details ?? "No Description")"
-                ViewItemVC.primeKeyHolder = toDosArray?[ip.row].primeKey
+                ViewItemVC.primeKey = toDosArray?[ip.row].primeKey
             }
         }
     }
