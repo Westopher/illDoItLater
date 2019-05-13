@@ -11,22 +11,27 @@ import RealmSwift
 
 class ViewController: UIViewController, UpdateDataDelegate {
     
-    func updatedData(_ title: String, _ description: String, _ primeKey: String) {
-        print(self.description, "received \(title) and \(description), \(primeKey)")
+    func updatedData(_ title: String, _ description: String) {
+        
+        print(self.description, "received \(title) and \(description)")
         
         var updatedRealmObject = ToDoObject()
         updatedRealmObject.title = title
         updatedRealmObject.details = description
         
         let realm = try! Realm()
-            try! realm.write {
+        try! realm.write(updatedRealmObject().self, value: ["title": title, "details": description], update: true) {
                 updatedRealmObject.title = "\(title)"
                 updatedRealmObject.details = "\(description)"
            }
         
+    
+        
         tableview.reloadData()
         print(toDosArray)
     }
+
+
     
     //making a variable that is an empty array of type todoobject so that you can put your list somewhere.
     var toDosArray:Results<ToDoObject>?
