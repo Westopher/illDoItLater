@@ -68,8 +68,8 @@ class ViewController: UIViewController, UpdateDataDelegate {
         if segue.identifier == "DetailSegue" {
             if let ViewItemVC = segue.destination as? ViewToDoListItemVC, let ip = tableview.indexPathForSelectedRow {
                 ViewItemVC.delegate = self
-                ViewItemVC.titleToDisplay = "\(toDosArray?[ip.row].title ?? "No Title")"
-                ViewItemVC.descriptionToDisplay = "\(toDosArray?[ip.row].details ?? "No Description")"
+                ViewItemVC.titleToDisplay = toDosArray?[ip.row].title ?? "No Title"
+                ViewItemVC.descriptionToDisplay = toDosArray?[ip.row].details ?? "No Description"
                 ViewItemVC.primeKey = toDosArray?[ip.row].primeKey
             }
         }
