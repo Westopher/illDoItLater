@@ -11,16 +11,17 @@ import RealmSwift
 
 class ViewController: UIViewController, UpdateDataDelegate {
     
-    func updatedData(_ title: String, _ description: String) {
+    func updatedData(_ title: String, _ description: String, _ primeKeyHolder: String) {
         
-        print(self.description, "received \(title) and \(description)")
+        print(self.description, "received \(title) and \(description), \(primeKeyHolder)")
         
         var updatedRealmObject = ToDoObject()
         updatedRealmObject.title = title
         updatedRealmObject.details = description
+        updatedRealmObject.primeKey = primeKeyHolder
         
         let realm = try! Realm()
-        try! realm.write(updatedRealmObject().self, value: ["title": title, "details": description], update: true) {
+        try! realm.write(ToDoObject.self, value: ["title": title, "details": description], update: true) {
                 updatedRealmObject.title = "\(title)"
                 updatedRealmObject.details = "\(description)"
            }
@@ -70,6 +71,7 @@ class ViewController: UIViewController, UpdateDataDelegate {
                 ViewItemVC.delegate = self
                 ViewItemVC.titleToDisplay = "\(toDosArray?[ip.row].title ?? "No Title")"
                 ViewItemVC.descriptionToDisplay = "\(toDosArray?[ip.row].details ?? "No Description")"
+                ViewItemVC.primeKeyHolder = toDosArray?[ip.row].primeKey
             }
         }
     }

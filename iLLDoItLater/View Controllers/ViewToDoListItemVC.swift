@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 protocol UpdateDataDelegate {
-    func updatedData(_ title: String, _ description: String)
+    func updatedData(_ title: String, _ description: String, _ myprimeKeyHolder: String)
 }
 
 class ViewToDoListItemVC: UIViewController {
@@ -27,6 +27,8 @@ class ViewToDoListItemVC: UIViewController {
     var descriptionToDisplay: String?
     
     var delegate: UpdateDataDelegate?
+    
+    var primeKeyHolder:String?
     
     
     override func viewDidLoad() {
@@ -48,8 +50,8 @@ class ViewToDoListItemVC: UIViewController {
                     return
                 }
         
-        print("about to call delegate method with \(myTitle), \(description)")
-        self.delegate?.updatedData(myTitle, description)
+        print("about to call delegate method with \(myTitle), \(description), \(primeKeyHolder)")
+        self.delegate?.updatedData(myTitle, description, primeKeyHolder)
     }
     
     
