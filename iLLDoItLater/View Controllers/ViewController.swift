@@ -94,14 +94,6 @@ class ViewController: UIViewController, UpdateDataDelegate {
         print("didselectrow: \(indexPath)")
         performSegue(withIdentifier: "DetailSegue", sender: nil)
         }
-        
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the destination  view controller in destVC.
-//        // Pass the selected object to the new view controller.
-//        if let destVC = segue.destination as? ViewToDoListItemVC {
-//            destVC.rowSelected = rowSelected
-//            }
-//        }
     
     }
 

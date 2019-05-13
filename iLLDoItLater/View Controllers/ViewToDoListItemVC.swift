@@ -14,8 +14,6 @@ protocol UpdateDataDelegate {
 }
 
 class ViewToDoListItemVC: UIViewController {
-
-    var rowSelected: Int?
     
     @IBOutlet weak var titleLabelViewItem: UILabel!
     @IBOutlet weak var emailToYourselfButton: UIButton!
@@ -46,15 +44,13 @@ class ViewToDoListItemVC: UIViewController {
         
         self.navigationController?.popViewController(animated: true)
         
-        let myPrimeKey: String
-        
         guard let myTitle = self.displayTitle.text, let description = self.displayDescription.text  else {
                     return
                 }
         
         
-        print("about to call delegate method with \(myTitle), \(description), \(myPrimeKey)")
-        self.delegate?.updatedData(myTitle, description, myPrimeKey)
+        print("about to call delegate method with \(myTitle), \(description)")
+        self.delegate?.updatedData(myTitle, description)
     }
     
     
