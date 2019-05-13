@@ -21,11 +21,14 @@ class ViewController: UIViewController, UpdateDataDelegate {
         updatedRealmObject.primeKey = primeKeyHolder
         
         let realm = try! Realm()
-        try! realm.write(ToDoObject.self, value: ["title": title, "details": description], update: true) {
+        
+        try! realm.write {
+            realm.add(ToDoObject.self, ["title": title, "details": description, "primeKey": primeKeyHolder], update: true) {
                 updatedRealmObject.title = "\(title)"
                 updatedRealmObject.details = "\(description)"
-           }
-        
+                updatedRealmObject.primeKey = "\(primeKeyHolder)"
+            }
+        }
     
         
         tableview.reloadData()
