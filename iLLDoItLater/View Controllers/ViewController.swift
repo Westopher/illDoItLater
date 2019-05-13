@@ -11,7 +11,7 @@ import RealmSwift
 
 class ViewController: UIViewController, UpdateDataDelegate {
     
-    func updatedData(_ title: String, _ description: String, primeKey: String) {
+    func updatedData(_ title: String, _ description: String, _ primeKey: String) {
         print(self.description, "received \(title) and \(description), \(primeKey)")
         
         var updatedRealmObject = ToDoObject()
@@ -70,6 +70,7 @@ class ViewController: UIViewController, UpdateDataDelegate {
     }
     
 }
+
     extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,9 +90,18 @@ class ViewController: UIViewController, UpdateDataDelegate {
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "DetailSegue", sender: nil)
+        var rowSelected = indexPath.row
         print("didselectrow: \(indexPath)")
+        performSegue(withIdentifier: "DetailSegue", sender: nil)
         }
+        
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the destination  view controller in destVC.
+//        // Pass the selected object to the new view controller.
+//        if let destVC = segue.destination as? ViewToDoListItemVC {
+//            destVC.rowSelected = rowSelected
+//            }
+//        }
     
     }
 

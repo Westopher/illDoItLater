@@ -15,6 +15,8 @@ protocol UpdateDataDelegate {
 
 class ViewToDoListItemVC: UIViewController {
 
+    var rowSelected: Int?
+    
     @IBOutlet weak var titleLabelViewItem: UILabel!
     @IBOutlet weak var emailToYourselfButton: UIButton!
     @IBOutlet weak var editItemButton: UIButton!
@@ -50,8 +52,9 @@ class ViewToDoListItemVC: UIViewController {
                     return
                 }
         
-        print("about to call delegate method with \(myTitle), \(description), \(primeKey)")
-                self.delegate?.updatedData(myTitle, description, primeKey)
+        
+        print("about to call delegate method with \(myTitle), \(description), \(myPrimeKey)")
+        self.delegate?.updatedData(myTitle, description, myPrimeKey)
     }
     
     
