@@ -96,7 +96,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        <#code#>
+        if editingStyle == .delete  {
+            if let item = toDosArray?[indexPath.row] {
+                try! realm.write {
+                    realm.delete(item)
+                }
+                
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+        
+            }
     }
-    }
+}
+}
 
