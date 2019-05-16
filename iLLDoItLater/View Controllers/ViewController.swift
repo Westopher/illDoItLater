@@ -98,6 +98,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete  {
             if let item = toDosArray?[indexPath.row] {
+                let realm = try! Realm()
                 try! realm.write {
                     realm.delete(item)
                 }
