@@ -10,9 +10,9 @@ import UIKit
 import RealmSwift
 
 class AddItemVC: UIViewController {
-
+    
     @IBOutlet weak var titleLabelAddItem: UILabel!
-    var ToDoListItemsVC = ViewController()
+    //var ToDoListItemsVC = ViewController()
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField?
@@ -57,10 +57,6 @@ class AddItemVC: UIViewController {
         let index = 0
         
     }
-    
-    ///where I want to use protocol to make the array populate the newest on top
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

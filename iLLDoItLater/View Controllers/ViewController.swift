@@ -9,13 +9,7 @@
 import UIKit
 import RealmSwift
 
-protocol sendListItemToTop {
-    func sendItemToTop(_ toDosItem: ToDoObject)
-}
-
-class ViewController: UIViewController, UpdateDataDelegate {
-    
-    var topDelegate: sendListItemToTop?
+class ViewController: UIViewController {
     
     func updatedData(_ title: String, _ description: String, _ primeKeyHolder: String) {
         print(self.description, "received \(title) and \(description), \(primeKeyHolder)")
