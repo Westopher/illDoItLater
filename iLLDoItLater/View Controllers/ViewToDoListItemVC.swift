@@ -20,18 +20,14 @@ class ViewToDoListItemVC: UIViewController {
     @IBOutlet weak var emailToYourselfButton: UIButton!
     @IBOutlet weak var editItemButton: UIButton!
     
-   
     @IBOutlet weak var displayTitle: UITextField!
     @IBOutlet weak var displayDescription: UITextView!
     
     var titleToDisplay: String?
     var descriptionToDisplay: String?
     
-    
-    
     var primeKey:String?
-    
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         displayTitle.text = "\(titleToDisplay ?? "No Title To Display")"
@@ -50,7 +46,5 @@ class ViewToDoListItemVC: UIViewController {
         print("about to call delegate method with \(myTitle), \(description), \(primeKey)")
         self.delegate?.updatedData(myTitle, description, primeKey ?? "no prime key")
     }
-    
-    
 
 }

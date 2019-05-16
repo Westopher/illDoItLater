@@ -12,7 +12,7 @@ import RealmSwift
 class AddItemVC: UIViewController {
     
     @IBOutlet weak var titleLabelAddItem: UILabel!
-    //var ToDoListItemsVC = ViewController()
+    var ToDoListItemsVC = ViewController()
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField?

@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UpdateDataDelegate {
     
     func updatedData(_ title: String, _ description: String, _ primeKeyHolder: String) {
         print(self.description, "received \(title) and \(description), \(primeKeyHolder)")
@@ -95,5 +95,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         performSegue(withIdentifier: "DetailSegue", sender: nil)
         }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        <#code#>
+    }
     }
 
