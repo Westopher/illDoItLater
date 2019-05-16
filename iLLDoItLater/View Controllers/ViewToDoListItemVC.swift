@@ -14,6 +14,7 @@ protocol UpdateDataDelegate {
 }
 
 class ViewToDoListItemVC: UIViewController {
+    var delegate: UpdateDataDelegate?
     
     @IBOutlet weak var titleLabelViewItem: UILabel!
     @IBOutlet weak var emailToYourselfButton: UIButton!
@@ -26,7 +27,7 @@ class ViewToDoListItemVC: UIViewController {
     var titleToDisplay: String?
     var descriptionToDisplay: String?
     
-    var delegate: UpdateDataDelegate?
+    
     
     var primeKey:String?
     
@@ -40,7 +41,6 @@ class ViewToDoListItemVC: UIViewController {
         self.emailToYourselfButton.layer.cornerRadius = 10
         self.editItemButton.layer.cornerRadius = 10
     }
-    
     
     @IBAction func editButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

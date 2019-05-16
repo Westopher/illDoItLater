@@ -9,31 +9,31 @@
 import UIKit
 import RealmSwift
 
+protocol sendListItemToTop {
+    func sendItemToTop(_ toDosItem: ToDoObject)
+}
+
 class ViewController: UIViewController, UpdateDataDelegate {
     
+    var topDelegate: sendListItemToTop?
+    
     func updatedData(_ title: String, _ description: String, _ primeKeyHolder: String) {
-        
         print(self.description, "received \(title) and \(description), \(primeKeyHolder)")
         
         var updatedRealmObject = ToDoObject()
-        
         updatedRealmObject.title = title
         updatedRealmObject.details = description
         updatedRealmObject.primeKey = primeKeyHolder
         
         let realm = try! Realm()
-        
         try! realm.write {
             realm.create(ToDoObject.self, value: ["title": updatedRealmObject.title, "detail": updatedRealmObject.details, "primeKey": updatedRealmObject.primeKey], update: true)
         }
     
-        
         tableview.reloadData()
         print(toDosArray)
     }
 
-
-    
     //making a variable that is an empty array of type todoobject so that you can put your list somewhere.
     var toDosArray:Results<ToDoObject>?
     
@@ -78,15 +78,15 @@ class ViewController: UIViewController, UpdateDataDelegate {
     
 }
 
-    extension ViewController: UITableViewDataSource, UITableViewDelegate {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return toDosArray == nil ? 0: toDosArray!.count
     }
     
-        func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
         
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -97,7 +97,6 @@ class ViewController: UIViewController, UpdateDataDelegate {
     }
         
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var rowSelected = indexPath.row
         print("didselectrow: \(indexPath)")
         performSegue(withIdentifier: "DetailSegue", sender: nil)
         }

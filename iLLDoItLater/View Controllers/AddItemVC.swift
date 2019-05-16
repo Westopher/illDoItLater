@@ -35,13 +35,15 @@ class AddItemVC: UIViewController {
         }
         
         print(toDoRealmObject.primeKey)
-        
         //reference the realm file then write the object to the realm file
         let realm = try! Realm()
         try! realm.write {
             realm.add(toDoRealmObject, update: true)
         }
         
+        self.addItemToTopOfList(toDoRealmObject)
+        
+        //alert user that item was added and send them back to home screen
         let alertController = UIAlertController(title: "Item Added", message: "Return To Home Screen", preferredStyle: .alert)
         let backToHome = UIAlertAction(title: "Continue", style: .cancel, handler: { action in self.performSegue(withIdentifier: "addedBackToHome", sender: self)})
         alertController.addAction(backToHome)
@@ -50,6 +52,15 @@ class AddItemVC: UIViewController {
         print("add button pressed")
         
     }
+    
+    func addItemToTopOfList(_ toDoRealmObject: ToDoObject) {
+        let index = 0
+        
+    }
+    
+    ///where I want to use protocol to make the array populate the newest on top
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
