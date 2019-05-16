@@ -21,7 +21,8 @@ class AddItemVC: UIViewController {
     @IBAction func addButtonPressed(_ sender: Any) {
         //create to do object and set its properties
         let toDoRealmObject = ToDoObject()
-            if toDoRealmObject.title == toDoRealmObject.title {
+        
+        if toDoRealmObject.title == toDoRealmObject.title {
                 toDoRealmObject.title = titleTextField!.text ?? "no title text"
             } else {
                 print("no text for title")

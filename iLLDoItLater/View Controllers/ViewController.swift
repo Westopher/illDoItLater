@@ -16,6 +16,7 @@ class ViewController: UIViewController, UpdateDataDelegate {
         print(self.description, "received \(title) and \(description), \(primeKeyHolder)")
         
         var updatedRealmObject = ToDoObject()
+        
         updatedRealmObject.title = title
         updatedRealmObject.details = description
         updatedRealmObject.primeKey = primeKeyHolder
@@ -66,11 +67,11 @@ class ViewController: UIViewController, UpdateDataDelegate {
         
         //if the user taps on a list item, this sets the next page's labels
         if segue.identifier == "DetailSegue" {
-            if let ViewItemVC = segue.destination as? ViewToDoListItemVC, let ip = tableview.indexPathForSelectedRow {
+            if let ViewItemVC = segue.destination as? ViewToDoListItemVC, let ip = tableview.indexPathForSelectedRow, let toDos = toDosArray {
                 ViewItemVC.delegate = self
-                ViewItemVC.titleToDisplay = toDosArray?[ip.row].title ?? "No Title"
-                ViewItemVC.descriptionToDisplay = toDosArray?[ip.row].details ?? "No Description"
-                ViewItemVC.primeKey = toDosArray?[ip.row].primeKey
+                ViewItemVC.titleToDisplay = toDos[ip.row].title
+                ViewItemVC.descriptionToDisplay = toDos[ip.row].details
+                ViewItemVC.primeKey = toDos[ip.row].primeKey
             }
         }
     }

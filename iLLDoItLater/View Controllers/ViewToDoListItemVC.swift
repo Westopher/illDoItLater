@@ -33,8 +33,8 @@ class ViewToDoListItemVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        displayTitle.text = "\(titleToDisplay)"
-        displayDescription.text = "\(descriptionToDisplay)"
+        displayTitle.text = "\(titleToDisplay ?? "No Title To Display")"
+        displayDescription.text = "\(descriptionToDisplay ?? "No Description To Display")"
         
         self.titleLabelViewItem.layer.cornerRadius = 10
         self.emailToYourselfButton.layer.cornerRadius = 10
@@ -43,13 +43,10 @@ class ViewToDoListItemVC: UIViewController {
     
     
     @IBAction func editButtonPressed(_ sender: Any) {
-        
         self.navigationController?.popViewController(animated: true)
-        
         guard let myTitle = self.displayTitle.text, let description = self.displayDescription.text  else {
                     return
                 }
-        
         print("about to call delegate method with \(myTitle), \(description), \(primeKey)")
         self.delegate?.updatedData(myTitle, description, primeKey ?? "no prime key")
     }
