@@ -258,16 +258,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Glc-QB-jDY" userLabel="Details Stack View">
-                                        <rect key="frame" x="0.0" y="70.5" width="366" height="130.5"/>
+                                        <rect key="frame" x="0.0" y="70.5" width="374" height="130.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ur3-YF-DfC" userLabel="Details">
-                                                <rect key="frame" x="0.0" y="0.0" width="366" height="30.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A27-oI-QBb" userLabel="DesciprtionToDisplay">
-                                                <rect key="frame" x="0.0" y="30.5" width="366" height="100"/>
+                                                <rect key="frame" x="0.0" y="30.5" width="374" height="100"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="vGZ-rh-ZOX"/>
@@ -278,21 +278,16 @@
                                             </textView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="A27-oI-QBb" firstAttribute="leading" secondItem="Glc-QB-jDY" secondAttribute="leading" id="JXC-k9-rwo"/>
-                                            <constraint firstItem="A27-oI-QBb" firstAttribute="leading" secondItem="Glc-QB-jDY" secondAttribute="leading" id="WNz-uz-l1l"/>
-                                            <constraint firstItem="Ur3-YF-DfC" firstAttribute="top" secondItem="Glc-QB-jDY" secondAttribute="top" id="bgh-6M-2Bv"/>
-                                            <constraint firstAttribute="trailing" secondItem="A27-oI-QBb" secondAttribute="trailing" id="eBs-Tu-LTi"/>
                                             <constraint firstItem="A27-oI-QBb" firstAttribute="top" secondItem="Ur3-YF-DfC" secondAttribute="bottom" id="lQH-9f-VpJ"/>
-                                            <constraint firstAttribute="trailing" secondItem="A27-oI-QBb" secondAttribute="trailing" id="xms-re-bbV"/>
-                                            <constraint firstItem="Ur3-YF-DfC" firstAttribute="leading" secondItem="Glc-QB-jDY" secondAttribute="leading" id="y8F-ic-rgf"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ur3-YF-DfC" secondAttribute="trailing" id="yvS-Jm-c1f"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="24h-up-1Za" firstAttribute="top" secondItem="o98-su-P7f" secondAttribute="top" id="Cnf-Ks-eeH"/>
                                     <constraint firstAttribute="trailing" secondItem="24h-up-1Za" secondAttribute="trailing" id="Cv7-8E-5N5"/>
+                                    <constraint firstAttribute="trailing" secondItem="Glc-QB-jDY" secondAttribute="trailing" id="GEq-W0-kHI"/>
                                     <constraint firstItem="24h-up-1Za" firstAttribute="leading" secondItem="o98-su-P7f" secondAttribute="leading" id="aO5-OG-f1r"/>
+                                    <constraint firstItem="Glc-QB-jDY" firstAttribute="leading" secondItem="o98-su-P7f" secondAttribute="leading" id="afb-I5-djs"/>
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zJs-2G-xA7" userLabel="Buttons Stack">
