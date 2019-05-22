@@ -46,5 +46,10 @@ class ViewToDoListItemVC: UIViewController {
         print("about to call delegate method with \(myTitle), \(description), \(primeKey)")
         self.delegate?.updatedData(myTitle, description, primeKey ?? "no prime key")
     }
+    
+    @IBAction func emailButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "emailSegue", sender: nil)
+    }
+    
 
 }
