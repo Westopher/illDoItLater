@@ -53,7 +53,6 @@ class ViewToDoListItemVC: UIViewController {
 
     
     @IBAction func emailButtonPressed(_ sender: Any) {
-        
             performSegue(withIdentifier: "emailSegue", sender: sender)
             guard let emailTitle = self.displayTitle.text, let emailDetail = self.displayDescription.text else {return}
             print("about to call EMAIL delegate method with \(emailTitle), \(emailDetail)")
