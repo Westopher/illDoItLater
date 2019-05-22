@@ -9,17 +9,21 @@
 import UIKit
 import RealmSwift
 
+//Update button pressed protocol
 protocol UpdateDataDelegate {
     func updatedData(_ title: String, _ description: String, _ myprimeKeyHolder: String)
 }
 
+//Email button pressed protocol
+protocol EmailTitleAndDetailDelegate {
+    func sendEmailVCTitleAndDetail(_ title: String, _ detail: String, myprimeKeyHolder: String)
+}
+
 class ViewToDoListItemVC: UIViewController {
    
-    
-    
+    //delegate declarations
     var delegate: UpdateDataDelegate?
-    
-    
+    var emailDelegate: EmailTitleAndDetailDelegate?
     
     @IBOutlet weak var titleLabelViewItem: UILabel!
     @IBOutlet weak var emailToYourselfButton: UIButton!
@@ -45,23 +49,26 @@ class ViewToDoListItemVC: UIViewController {
     
     @IBAction func editButtonPressed(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-        guard let myTitle = self.displayTitle.text, let description = self.displayDescription.text  else {
-                    return
-                }
-        print("about to call delegate method with \(myTitle), \(description), \(primeKey)")
+        guard let myTitle = self.displayTitle.text, let description = self.displayDescription.text else {return}
+        print("about to call EDIT delegate method with \(myTitle), \(description), \(primeKey)")
         self.delegate?.updatedData(myTitle, description, primeKey ?? "no prime key")
     }
+    
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "emailSegue" {
             guard let sendEmailVC = segue.destination as? SendEmailVC else {return}
-            sendEmailVC.emailDelegate = // dfdb
+            sendEmailVC.emailDelegate = self
         }
     }
     
-//    @IBAction func emailButtonPressed(_ sender: Any) {
-//        performSegue(withIdentifier: "emailSegue", sender: nil)
-//    }
+    @IBAction func emailButtonPressed(_ sender: Any) {
+        self.navigationController?.pushViewController(SendEmailVC, animated: true)
+        guard let emailTitle = self.displayTitle.text, let emailDescription = self.displayDescription.text  else {return}
+        print("about to call EMAIL delegate method with \(myTitle), \(description), \(primeKey)")
+        //self.emailDelegate?.sendEmailVCTitleAndDetail(emailTitle, emailDetail, myprimeKeyHolder)
+    }
     
 
 }

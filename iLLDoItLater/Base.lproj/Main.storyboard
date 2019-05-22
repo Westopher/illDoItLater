@@ -523,7 +523,9 @@
                         <viewLayoutGuide key="safeArea" id="Xx4-t7-CFM"/>
                     </view>
                     <connections>
+                        <outlet property="detailLabe" destination="jps-Wc-OtO" id="fbu-Rw-V5E"/>
                         <outlet property="sendEmailButton" destination="KCQ-En-AuS" id="mS2-ml-ptc"/>
+                        <outlet property="titleLabel" destination="MWw-Sn-XVg" id="5Rt-Ub-9wR"/>
                     </connections>
                 </viewController>
             </objects>
