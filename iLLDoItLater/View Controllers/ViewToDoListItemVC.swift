@@ -57,23 +57,12 @@ class ViewToDoListItemVC: UIViewController {
 
     
     @IBAction func emailButtonPressed(_ sender: Any) {
-        
             let emailVC = SendEmailVC()
-            self.performSegue(withIdentifier: "emailSegue", sender: Any?)
+            self.performSegue(withIdentifier: "emailSegue", sender: sender)
             guard let emailTitle = self.displayTitle.text, let emailDescription = self.displayDescription.text else {return}
             print("about to call EMAIL delegate method with \(emailTitle), \(emailDescription)")
             self.emailDelegate?.sendEmailVCTitleAndDetail(emailTitle, emailDescription)
     
     }
-    
-
-//override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    if segue.identifier == "emailSegue" {
-//        guard let sendEmailViewController = segue.destination as? SendEmailVC else {return}
-//        guard let emailTitle = self.displayTitle.text, let emailDescription = self.displayDescription.text else {return}
-//        print("about to call EMAIL delegate method with \(emailTitle), \(emailDescription)")
-//        self.emailDelegate?.sendEmailVCTitleAndDetail(emailTitle, emailDescription)
-//    }
-//}
     
 }
