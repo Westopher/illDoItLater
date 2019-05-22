@@ -21,7 +21,7 @@ class ViewController: UIViewController, UpdateDataDelegate {
         
         let realm = try! Realm()
         try! realm.write {
-            realm.create(ToDoObject.self, value: ["title": updatedRealmObject.title, "detail": updatedRealmObject.details, "primeKey": updatedRealmObject.primeKey], update: true)
+            realm.create(ToDoObject.self, value: ["title": updatedRealmObject.title, "details": updatedRealmObject.details, "primeKey": updatedRealmObject.primeKey], update: true)
         }
     
         tableview.reloadData()
