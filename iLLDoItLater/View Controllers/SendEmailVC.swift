@@ -8,14 +8,17 @@
 
 import UIKit
 
-class SendEmailVC: UIViewController {
+
+
+class SendEmailVC: UIViewController, EmailTitleAndDetailDelegate {
+    func sendEmailVCTitleAndDetail(_ emailTitle: String, _ emailDetail: String) {
+        print(self.description, "received \(emailTitle) and \(emailDetail)")
+    }
+    
+    
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabe: UILabel!
-    
-    
-    var emailDelegate: EmailTitleAndDetail? = nil
-    
     
     @IBOutlet weak var sendEmailButton: UIButton!
     
@@ -27,7 +30,7 @@ class SendEmailVC: UIViewController {
     
     //actually send the email
     @IBAction func sendEmailPressed(_ sender: Any) {
-        emailDelegate?.sendEmailVCTitleAndDetail("\()", "\()")
+        //emailDelegate?.sendEmailVCTitleAndDetail("\()", "\()")
         
     }
     

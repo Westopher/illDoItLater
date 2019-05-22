@@ -14,14 +14,14 @@ protocol UpdateDataDelegate {
     func updatedData(_ title: String, _ description: String, _ myprimeKeyHolder: String)
 }
 
-//Email button pressed protocol
 protocol EmailTitleAndDetailDelegate {
-    func sendEmailVCTitleAndDetail(_ title: String, _ detail: String, myprimeKeyHolder: String)
+    func sendEmailVCTitleAndDetail(_ emailTitle: String, _ emailDetail: String)
 }
+
 
 class ViewToDoListItemVC: UIViewController {
    
-    //delegate declarations
+    //delegate declaration
     var delegate: UpdateDataDelegate?
     var emailDelegate: EmailTitleAndDetailDelegate?
     
@@ -54,19 +54,23 @@ class ViewToDoListItemVC: UIViewController {
         self.delegate?.updatedData(myTitle, description, primeKey ?? "no prime key")
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "emailSegue" {
-            guard let sendEmailVC = segue.destination as? SendEmailVC else {return}
-            sendEmailVC.emailDelegate = self
-        }
-    }
+
     
     @IBAction func emailButtonPressed(_ sender: Any) {
-        self.navigationController?.pushViewController(UIViewController, animated: true)
+        var emailVC = SendEmailVC()
+        self.navigationController?.pushViewController(emailVC, animated: true)
         guard let emailTitle = self.displayTitle.text, let emailDescription = self.displayDescription.text  else {return}
         print("about to call EMAIL delegate method with \(emailTitle), \(emailDescription), \(primeKey)")
-        //self.emailDelegate?.sendEmailVCTitleAndDetail(emailTitle, emailDetail, myprimeKeyHolder)
+        self.emailDelegate?.sendEmailVCTitleAndDetail(emailTitle, emailDescription)
     }
     
 
 }
+
+
+//override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    if segue.identifier == "emailSegue" {
+//        guard let sendEmailVC = segue.destination as? SendEmailVC else {return}
+//
+//    }
+//}
