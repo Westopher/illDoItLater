@@ -11,10 +11,10 @@ import UIKit
 
 
 class SendEmailVC: UIViewController, EmailTitleAndDetailDelegate {
+    
     func sendEmailVCTitleAndDetail(_ emailTitle: String, _ emailDetail: String) {
         print(self.description, "received \(emailTitle) and \(emailDetail)")
     }
-    
     
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -24,13 +24,13 @@ class SendEmailVC: UIViewController, EmailTitleAndDetailDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.sendEmailButton.layer.cornerRadius = 10
+        self.sendEmailButton?.layer.cornerRadius = 10
         
     }
     
     //actually send the email
     @IBAction func sendEmailPressed(_ sender: Any) {
-        //emailDelegate?.sendEmailVCTitleAndDetail("\()", "\()")
+        
         
     }
     

@@ -17,7 +17,6 @@
 		3D89F0652257BA7A00775CC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D89F0642257BA7A00775CC3 /* Assets.xcassets */; };
 		3D89F0682257BA7A00775CC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D89F0662257BA7A00775CC3 /* LaunchScreen.storyboard */; };
 		3DCF4C962295AA9D00539899 /* SendEmailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF4C952295AA9D00539899 /* SendEmailVC.swift */; };
-		3DCF4C982295C50700539899 /* EmailTitleAndDetailsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCF4C972295C50700539899 /* EmailTitleAndDetailsDelegate.swift */; };
 		72F1C3D3540BF85F80FB1BB9 /* Pods_iLLDoItLater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73D908005EC606B83F9FB92 /* Pods_iLLDoItLater.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		3D89F0672257BA7A00775CC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D89F0692257BA7A00775CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DCF4C952295AA9D00539899 /* SendEmailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEmailVC.swift; sourceTree = "<group>"; };
-		3DCF4C972295C50700539899 /* EmailTitleAndDetailsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTitleAndDetailsDelegate.swift; sourceTree = "<group>"; };
 		42E69AA070F62C95A81BA57B /* Pods-iLLDoItLater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iLLDoItLater.debug.xcconfig"; path = "Target Support Files/Pods-iLLDoItLater/Pods-iLLDoItLater.debug.xcconfig"; sourceTree = "<group>"; };
 		E73D908005EC606B83F9FB92 /* Pods_iLLDoItLater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iLLDoItLater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -65,10 +63,9 @@
 			children = (
 				3D89F05F2257BA7900775CC3 /* ViewController.swift */,
 				3D0705D7225C0EF9000D2902 /* ViewToDoListItemVC.swift */,
+				3DCF4C952295AA9D00539899 /* SendEmailVC.swift */,
 				3D6F1BDB2257E28C000AF821 /* AddItemVC.swift */,
 				3D4A72332280D37E00FFD9CA /* DeleteAllVC.swift */,
-				3DCF4C952295AA9D00539899 /* SendEmailVC.swift */,
-				3DCF4C972295C50700539899 /* EmailTitleAndDetailsDelegate.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -243,7 +240,6 @@
 				3D89F05E2257BA7900775CC3 /* AppDelegate.swift in Sources */,
 				3D6F1BDA2257CFD0000AF821 /* ToDoModel.swift in Sources */,
 				3D6F1BDC2257E28C000AF821 /* AddItemVC.swift in Sources */,
-				3DCF4C982295C50700539899 /* EmailTitleAndDetailsDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

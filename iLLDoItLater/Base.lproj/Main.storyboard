@@ -380,7 +380,6 @@
         <!--Send EmailVC-->
         <scene sceneID="qgX-Pq-807">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L8k-aK-waR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="0xj-7V-zUK" customClass="SendEmailVC" customModule="iLLDoItLater" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OZj-F0-0Wt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -528,6 +527,7 @@
                         <outlet property="titleLabel" destination="MWw-Sn-XVg" id="5Rt-Ub-9wR"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L8k-aK-waR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3829" y="150"/>
         </scene>
