@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D0705D8225C0EF9000D2902 /* ViewToDoListItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0705D7225C0EF9000D2902 /* ViewToDoListItemVC.swift */; };
+		3D4A12AE2296135D00EF5CE3 /* emailDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A12AD2296135D00EF5CE3 /* emailDelegate.swift */; };
 		3D4A72342280D37E00FFD9CA /* DeleteAllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4A72332280D37E00FFD9CA /* DeleteAllVC.swift */; };
 		3D6F1BDA2257CFD0000AF821 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F1BD92257CFD0000AF821 /* ToDoModel.swift */; };
 		3D6F1BDC2257E28C000AF821 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6F1BDB2257E28C000AF821 /* AddItemVC.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		250B594A54E74236B9A6AECC /* Pods-iLLDoItLater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iLLDoItLater.release.xcconfig"; path = "Target Support Files/Pods-iLLDoItLater/Pods-iLLDoItLater.release.xcconfig"; sourceTree = "<group>"; };
 		3D0705D7225C0EF9000D2902 /* ViewToDoListItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToDoListItemVC.swift; sourceTree = "<group>"; };
+		3D4A12AD2296135D00EF5CE3 /* emailDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emailDelegate.swift; sourceTree = "<group>"; };
 		3D4A72332280D37E00FFD9CA /* DeleteAllVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAllVC.swift; sourceTree = "<group>"; };
 		3D6F1BD92257CFD0000AF821 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 		3D6F1BDB2257E28C000AF821 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				3DCF4C952295AA9D00539899 /* SendEmailVC.swift */,
 				3D6F1BDB2257E28C000AF821 /* AddItemVC.swift */,
 				3D4A72332280D37E00FFD9CA /* DeleteAllVC.swift */,
+				3D4A12AD2296135D00EF5CE3 /* emailDelegate.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D89F0602257BA7900775CC3 /* ViewController.swift in Sources */,
+				3D4A12AE2296135D00EF5CE3 /* emailDelegate.swift in Sources */,
 				3DCF4C962295AA9D00539899 /* SendEmailVC.swift in Sources */,
 				3D4A72342280D37E00FFD9CA /* DeleteAllVC.swift in Sources */,
 				3D0705D8225C0EF9000D2902 /* ViewToDoListItemVC.swift in Sources */,

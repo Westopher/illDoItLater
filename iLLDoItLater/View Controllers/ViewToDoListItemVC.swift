@@ -14,10 +14,6 @@ protocol UpdateDataDelegate {
     func updatedData(_ title: String, _ description: String, _ myprimeKeyHolder: String)
 }
 
-protocol EmailTitleAndDetailDelegate {
-    func sendEmailVCTitleAndDetail(_ emailTitle: String, _ emailDetail: String)
-}
-
 
 class ViewToDoListItemVC: UIViewController {
    
@@ -57,11 +53,11 @@ class ViewToDoListItemVC: UIViewController {
 
     
     @IBAction func emailButtonPressed(_ sender: Any) {
-            let emailVC = SendEmailVC()
-            self.performSegue(withIdentifier: "emailSegue", sender: sender)
-            guard let emailTitle = self.displayTitle.text, let emailDescription = self.displayDescription.text else {return}
-            print("about to call EMAIL delegate method with \(emailTitle), \(emailDescription)")
-            self.emailDelegate?.sendEmailVCTitleAndDetail(emailTitle, emailDescription)
+        
+            performSegue(withIdentifier: "emailSegue", sender: sender)
+            guard let emailTitle = self.displayTitle.text, let emailDetail = self.displayDescription.text else {return}
+            print("about to call EMAIL delegate method with \(myTitle), \(description), \(primeKey)")
+            self.emailDelegate?.sendEmailVCTitleAndDetail(emailTitle, emailDetail)
     
     }
     
