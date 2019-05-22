@@ -54,8 +54,6 @@ class ViewToDoListItemVC: UIViewController {
         self.delegate?.updatedData(myTitle, description, primeKey ?? "no prime key")
     }
     
-
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "emailSegue" {
             guard let sendEmailVC = segue.destination as? SendEmailVC else {return}
@@ -64,9 +62,9 @@ class ViewToDoListItemVC: UIViewController {
     }
     
     @IBAction func emailButtonPressed(_ sender: Any) {
-        self.navigationController?.pushViewController(SendEmailVC, animated: true)
+        self.navigationController?.pushViewController(UIViewController, animated: true)
         guard let emailTitle = self.displayTitle.text, let emailDescription = self.displayDescription.text  else {return}
-        print("about to call EMAIL delegate method with \(myTitle), \(description), \(primeKey)")
+        print("about to call EMAIL delegate method with \(emailTitle), \(emailDescription), \(primeKey)")
         //self.emailDelegate?.sendEmailVCTitleAndDetail(emailTitle, emailDetail, myprimeKeyHolder)
     }
     
