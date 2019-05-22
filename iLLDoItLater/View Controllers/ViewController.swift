@@ -53,7 +53,6 @@ class ViewController: UIViewController, UpdateDataDelegate {
     }
     //if user taps on the plus sign in the upper right to add a new list item, send them to the add item view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "AddNewSegue" {
             let addVC = segue.destination as! AddItemVC
             addVC.ToDoListItemsVC = self

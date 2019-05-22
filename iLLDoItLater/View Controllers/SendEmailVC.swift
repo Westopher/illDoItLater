@@ -14,7 +14,7 @@ class SendEmailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.sendEmailButton.layer.cornerRadius = 10
         
     }
     
