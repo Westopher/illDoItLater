@@ -9,7 +9,10 @@
 import UIKit
 
 class SendEmailVC: UIViewController {
-
+    
+    var emailDelegate: EmailTitleAndDetail? = nil
+    
+    
     @IBOutlet weak var sendEmailButton: UIButton!
     
     override func viewDidLoad() {
@@ -18,8 +21,10 @@ class SendEmailVC: UIViewController {
         
     }
     
-    
+    //actually send the email
     @IBAction func sendEmailPressed(_ sender: Any) {
+        
+        
     }
     
     

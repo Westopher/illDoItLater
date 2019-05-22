@@ -14,7 +14,12 @@ protocol UpdateDataDelegate {
 }
 
 class ViewToDoListItemVC: UIViewController {
+   
+    
+    
     var delegate: UpdateDataDelegate?
+    
+    
     
     @IBOutlet weak var titleLabelViewItem: UILabel!
     @IBOutlet weak var emailToYourselfButton: UIButton!
@@ -47,11 +52,16 @@ class ViewToDoListItemVC: UIViewController {
         self.delegate?.updatedData(myTitle, description, primeKey ?? "no prime key")
     }
     
-    
-    
-    @IBAction func emailButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "emailSegue", sender: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "emailSegue" {
+            guard let sendEmailVC = segue.destination as? SendEmailVC else {return}
+            sendEmailVC.emailDelegate = // dfdb
+        }
     }
+    
+//    @IBAction func emailButtonPressed(_ sender: Any) {
+//        performSegue(withIdentifier: "emailSegue", sender: nil)
+//    }
     
 
 }
