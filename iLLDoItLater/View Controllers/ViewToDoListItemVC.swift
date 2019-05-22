@@ -60,7 +60,7 @@ class ViewToDoListItemVC: UIViewController {
         var emailVC = SendEmailVC()
         self.navigationController?.pushViewController(emailVC, animated: true)
         guard let emailTitle = self.displayTitle.text, let emailDescription = self.displayDescription.text  else {return}
-        print("about to call EMAIL delegate method with \(emailTitle), \(emailDescription), \(primeKey)")
+        print("about to call EMAIL delegate method with \(emailTitle), \(emailDescription)")
         self.emailDelegate?.sendEmailVCTitleAndDetail(emailTitle, emailDescription)
     }
     
