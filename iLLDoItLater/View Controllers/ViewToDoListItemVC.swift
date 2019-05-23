@@ -64,9 +64,12 @@ class ViewToDoListItemVC: UIViewController, MFMailComposeViewControllerDelegate,
         mailComposer.mailComposeDelegate = self
         
         var emailText = enterEmail.text
-        mailComposer.setToRecipients(["\(emailText)"])
-        mailComposer.setSubject("\(displayTitle)")
-        mailComposer.setMessageBody("Title: \(displayTitle), Description: \(displayDescription)", isHTML: false)
+        guard let sendEmailSubject = displayTitle.text, let sendEmailDescription = displayDescription.text else {return}
+        
+        
+        mailComposer.setToRecipients(["\(emailText ?? "Enter Email Address")"])
+        mailComposer.setSubject("\(sendEmailSubject)")
+        mailComposer.setMessageBody("I'LL DO IT LATER... okay, now is later. Here is your reminder: \n\n\nTitle: \(sendEmailSubject) \nDescription: \(sendEmailDescription)", isHTML: false)
         
         present(mailComposer, animated: true, completion: nil)
         
