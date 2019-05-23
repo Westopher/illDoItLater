@@ -8,17 +8,13 @@
 
 import UIKit
 
-
-
 class SendEmailVC: UIViewController, EmailTitleAndDetailDelegate {
     
     func sendEmailVCTitleAndDetail(_ emailTitle: String, _ emailDetail: String) {
-        titleLabel.text = emailTitle
-        detailLabe.text = emailDetail
+        print(self.description, "received \(emailTitle) and \(emailDetail)")
+        titleLabel.text = "\(emailTitle)"
+        detailLabe.text = "\(emailDetail)"
     }
-    
-    
-    
     
     
     @IBOutlet weak var titleLabel: UILabel!
