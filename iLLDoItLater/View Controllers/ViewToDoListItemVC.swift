@@ -29,7 +29,7 @@ class ViewToDoListItemVC: UIViewController, MFMailComposeViewControllerDelegate,
     @IBOutlet weak var enterEmail: UITextField!
     
     @IBOutlet weak var displayTitle: UITextField!
-    @IBOutlet weak var displayDescription: UITextView!
+    @IBOutlet weak var displayDescription: UITextField!
     
     var titleToDisplay: String?
     var descriptionToDisplay: String?
@@ -69,7 +69,7 @@ class ViewToDoListItemVC: UIViewController, MFMailComposeViewControllerDelegate,
         
         mailComposer.setToRecipients(["\(emailText ?? "Enter Email Address")"])
         mailComposer.setSubject("\(sendEmailSubject)")
-        mailComposer.setMessageBody("I'LL DO IT LATER... okay, now is later. Here is your reminder: \n\n\nTitle: \(sendEmailSubject) \nDescription: \(sendEmailDescription)", isHTML: false)
+        mailComposer.setMessageBody("I'LL DO IT LATER... okay, now is later. Here is your reminder: \n\nTitle: \(sendEmailSubject) \nDescription: \(sendEmailDescription)", isHTML: false)
         
         present(mailComposer, animated: true, completion: nil)
         
