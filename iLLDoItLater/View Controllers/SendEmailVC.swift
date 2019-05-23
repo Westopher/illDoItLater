@@ -20,8 +20,6 @@ class SendEmailVC: UIViewController, EmailTitleAndDetailDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabe: UILabel!
     
-    
-    
     @IBOutlet weak var sendEmailButton: UIButton!
     
     override func viewDidLoad() {

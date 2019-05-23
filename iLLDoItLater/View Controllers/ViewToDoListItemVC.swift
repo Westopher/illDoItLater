@@ -43,7 +43,7 @@ class ViewToDoListItemVC: UIViewController {
         self.editItemButton.layer.cornerRadius = 10
     }
     
-    @IBAction func editButtonPressed(_ sender: Any) {
+    @IBAction func editButtonPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
         guard let myTitle = self.displayTitle.text, let description = self.displayDescription.text else {return}
         print("about to call EDIT delegate method with \(myTitle), \(description), \(primeKey)")
