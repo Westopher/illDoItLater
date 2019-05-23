@@ -44,6 +44,8 @@ class ViewToDoListItemVC: UIViewController, MFMailComposeViewControllerDelegate,
         self.titleLabelViewItem.layer.cornerRadius = 10
         self.emailToYourselfButton.layer.cornerRadius = 10
         self.editItemButton.layer.cornerRadius = 10
+        
+        self.hideKeyboard()
     }
     
     @IBAction func editButtonPressed(_ sender: UIButton) {
@@ -87,3 +89,20 @@ class ViewToDoListItemVC: UIViewController, MFMailComposeViewControllerDelegate,
     }
     
 
+extension ViewToDoListItemVC {
+    
+    func hideKeyboard()
+    {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(AddItemVC.dismissKeyboard))
+        
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
+}
