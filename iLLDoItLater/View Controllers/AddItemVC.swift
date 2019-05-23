@@ -62,6 +62,7 @@ class AddItemVC: UIViewController {
         super.viewDidLoad()
         self.addButtonStyle.layer.cornerRadius = 10
         self.titleLabelAddItem.layer.cornerRadius = 10
+        self.hideKeyboard()
     }
 
 }
