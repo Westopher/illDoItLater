@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import MessageUI
 
 //Update button pressed protocol
 protocol UpdateDataDelegate {
@@ -15,15 +16,17 @@ protocol UpdateDataDelegate {
 }
 
 
-class ViewToDoListItemVC: UIViewController {
+class ViewToDoListItemVC: UIViewController, MFMailComposeViewControllerDelegate, UINavigationControllerDelegate {
    
     //delegate declaration
     var delegate: UpdateDataDelegate?
-    var emailDelegate: EmailTitleAndDetailDelegate?
+    // OLD VERSION DELEGATE    var emailDelegate: EmailTitleAndDetailDelegate?
     
     @IBOutlet weak var titleLabelViewItem: UILabel!
     @IBOutlet weak var emailToYourselfButton: UIButton!
     @IBOutlet weak var editItemButton: UIButton!
+    
+    @IBOutlet weak var enterEmail: UITextField!
     
     @IBOutlet weak var displayTitle: UITextField!
     @IBOutlet weak var displayDescription: UITextView!
@@ -52,10 +55,32 @@ class ViewToDoListItemVC: UIViewController {
     
 
     @IBAction func emailButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "emailSegue", sender: sender)
-        guard let emailTitle = self.displayTitle.text, let emailDetail = self.displayDescription.text else {return}
-        print("about to call EMAIL delegate method with \(emailTitle), \(emailDetail)")
-        self.emailDelegate?.sendEmailVCTitleAndDetail(emailTitle, emailDetail)
+        if !MFMailComposeViewController.canSendMail() {
+            print("this device can not send mail")
+            return
+        }
+        
+        let mailComposer = MFMailComposeViewController()
+        mailComposer.mailComposeDelegate = self
+        
+        var emailText = enterEmail.text
+        mailComposer.setToRecipients(["\(emailText)"])
+        mailComposer.setSubject("\(displayTitle)")
+        mailComposer.setMessageBody("Title: \(displayTitle), Description: \(displayDescription)", isHTML: false)
+        
+        present(mailComposer, animated: true, completion: nil)
+        
     }
     
-}
+    func mailComposeController(_ controller:
+        MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
+    }
+        
+//        performSegue(withIdentifier: "emailSegue", sender: sender)
+//        guard let emailTitle = self.displayTitle.text, let emailDetail = self.displayDescription.text else {return}
+//        print("about to call EMAIL delegate method with \(emailTitle), \(emailDetail)")
+//        self.emailDelegate?.sendEmailVCTitleAndDetail(emailTitle, emailDetail)
+    }
+    
+

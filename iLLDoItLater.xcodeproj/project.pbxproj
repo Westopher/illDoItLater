@@ -65,10 +65,10 @@
 			children = (
 				3D89F05F2257BA7900775CC3 /* ViewController.swift */,
 				3D0705D7225C0EF9000D2902 /* ViewToDoListItemVC.swift */,
-				3DCF4C952295AA9D00539899 /* SendEmailVC.swift */,
 				3D6F1BDB2257E28C000AF821 /* AddItemVC.swift */,
 				3D4A72332280D37E00FFD9CA /* DeleteAllVC.swift */,
 				3D4A12AD2296135D00EF5CE3 /* emailDelegate.swift */,
+				3DCF4C952295AA9D00539899 /* SendEmailVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
